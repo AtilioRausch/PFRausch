@@ -1,0 +1,15 @@
+/* Reset CSS, margin y padding, porque valor
+ por defecto varía entre navegadores */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body nav ul{
+    list-style-type: none;
+}
+body nav ul li a{
+    color: black;
+    font-style: normal;
+    text-decoration: none;
+}
