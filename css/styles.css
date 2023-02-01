@@ -16,9 +16,11 @@ header{
     font-size: 0px; 
     height: 8rem;
     position: sticky;
+    top: 0%;
+    z-index: 10;
 }
 header nav{
-    position: relative;
+    position: relative; 
     top: 0%;
     left: 0%;
     height: 100%;
@@ -82,3 +84,21 @@ body header nav div ul li{
     max-height: 20%;
     margin: 3rem 16% 2rem 80%;
 }
+
+/* ------------------Parallax------------------*/
+
+.parallax{
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:  cover;
+	height:30rem;
+	max-width: 100%;
+	position: relative
+}
+	
+.back_uno{background-image: url('https://tinyurl.com/jp56xcg')}
+
+.back-dos{background-image:url("https://tinyurl.com/gw9vvxs")}
+
+.back-tres{background-image:url("https://tinyurl.com/zod9tj3")}
