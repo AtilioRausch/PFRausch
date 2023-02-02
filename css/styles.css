@@ -11,6 +11,27 @@ a{
     color: #252422;
     text-decoration: none;
 }
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+}
+h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.75rem;
+}
+h3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+}
+p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: medium;
+}
+li{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+}
+
 /* Establezco el tamaño de fuente en 0px
     ya que queda espacio entre divs y
     alineo horizontalmente al centro cada uno*/
@@ -63,7 +84,7 @@ a partir del 25%*/
     left: 25%;
 }
 /* Cada elemento de la lista del nav*/
-body header nav div ul li{
+body header nav div.navBar_div_list ul li{
     list-style-type: none;
     display: inline-block;
     padding-left: 10%;
@@ -96,9 +117,9 @@ body header nav div ul li{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size:  cover;
-	height:30rem;
+	height:40rem;
 	max-width: 100%;
-	position: relative
+	position: relative;
 }
 	
 .back_uno{background-image: url('https://tinyurl.com/jp56xcg')}
@@ -107,8 +128,49 @@ body header nav div ul li{
 
 .back-tres{background-image:url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701688470.jpg")}
 
+/* ------------------Secciones index------------------*/
+div.floatingBar{
+    background-color: palegreen;
+    position: fixed;
+    left: 90%;
+    top: 90%;
+    z-index: 20;
+    width: 6%;
+}
+main section#overview{
+    height: 40rem;
+}
+main section#about_us{
+    height: 40rem;
+    color: #ccc5b9;
+}
+main section#research{
+    height: 40rem;
+    color: #ccc5b9;
+}
+.articleSectionMain{
+    height: 100%;
+}
+.divSectionMain{
+   text-align: center;
+   height: 100%;
+   width: 100%;
+}
+main section#overview article div h1{
+    padding-top: 5px;
+}
+main section#about_us article div div ul li{
+    display: inline-block;
+}
+
+main section#about_us article div h2{
+    padding-top: 5px;
+}
 /* ------------------Footer------------------*/
 
+footer div{
+    z-index: 40;
+}
 .divLogoFooter{
     position: relative;
     top: 0%;
