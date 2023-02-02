@@ -7,6 +7,10 @@
 
 /* ------------------Estilo del header y nav------------------*/
 
+a{
+    color: #252422;
+    text-decoration: none;
+}
 /* Establezco el tamaño de fuente en 0px
     ya que queda espacio entre divs y
     alineo horizontalmente al centro cada uno*/
@@ -67,7 +71,7 @@ body header nav div ul li{
 /* Estilo del logo*/
 .navBar_logo{
     height: 100%;
-    max-width: 50%;
+    max-width: 55%;
     max-height: 50%;
     margin: 2rem 100% 2rem 8%;
 }
@@ -99,6 +103,169 @@ body header nav div ul li{
 	
 .back_uno{background-image: url('https://tinyurl.com/jp56xcg')}
 
-.back-dos{background-image:url("https://tinyurl.com/gw9vvxs")}
+.back-dos{background-color: #252422;}
 
-.back-tres{background-image:url("https://tinyurl.com/zod9tj3")}
+.back-tres{background-image:url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701688470.jpg")}
+
+/* ------------------Footer------------------*/
+
+.divLogoFooter{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    text-align: center;
+    background-color: #eb5e28;
+    font-size: 0%;
+    height: 6rem;
+    width: 100%;
+    /*  Utilizando flex, la alineación vertical
+    se hace con dos lineas:
+    display: flex;
+    align-items: center; */
+}
+.imgChica{
+    max-width: 60%;
+    max-height: 60%;
+}
+.liLogoFooter
+{
+    height: 100%;
+    display: inline-block;
+    width: 20%;
+    top: 20%;
+}
+.logoLN{
+    position: absolute;
+    left: 0%;
+}
+.logoTW{
+    position: absolute;
+    left: 20%;
+}
+.logoEMAIL{
+    position: absolute;
+    left: 40%;
+}
+.logoGIT{
+    position: absolute;
+    left: 60%;
+}
+.logoSP{
+    position: absolute;
+    left: 80%;
+}
+
+
+
+.divFin{
+    background-color: #ccc5b9;
+    height: 24rem;
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+.brioplant_footer{
+    width: 25%;
+    position: absolute;
+    left: 0%;
+    height: 100%;
+}
+.info_footer{
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    height: 100%;
+}
+.insti_footer{
+    width: 25%;
+    position: absolute;
+    left: 75%;
+    height: 100%;
+}
+footer div div.brioplant_footer img{
+    position: absolute;
+    max-width: 60%;
+    max-height: 80%;
+    left: 25%;
+    top: 8%;
+    width: 100%;
+    height: 100%;
+}
+footer div div.brioplant_footer p{
+    position: absolute;
+    left: 38%;
+    top: 90%;
+}
+.logoIAL{
+    position: absolute;
+    max-width: 45%;
+    max-height: 30%;
+    width: 50%;
+    height: 50%;
+    left: 0%;
+    top:20%;
+}
+.logoBGI{
+    position: absolute;
+    max-width: 30%;
+    max-height: 30%;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+    top:20%;
+}
+.logoUNER{
+    position: absolute;
+    max-width: 44%;
+    max-height: 30%;
+    width: 50%;
+    height: 50%;
+    left: 0%;
+    top: 60%
+}
+.logoCoderhouse{
+    position: absolute;
+    max-width: 45%;
+    max-height: 25%;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+    top: 60%;
+}
+
+.div_footer_databases{
+    display: inline-block;
+    position: absolute;
+    left: 20%;
+    width: 33.33%;
+    top: 40%;
+}
+.div_footer_softwares{
+    display: inline-block;
+    position: absolute;
+    left: 35%;
+    width: 33.33%;
+    top: 40%;
+}
+.div_footer_info{
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    width: 33.33%;
+    top: 40%;
+}
+footer div div ul.list_footer_databases{
+    list-style-type: none;
+}
+footer div div ul.list_footer_softwares{
+    list-style-type: none;
+}
+footer div div ul.list_footer_info{
+    list-style-type: none;
+}
+footer div div.info_footer hr{
+    position: absolute;
+    left: 20%;
+    top: 45%;
+    width: 40%;
+}
