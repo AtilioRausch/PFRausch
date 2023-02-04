@@ -5,8 +5,8 @@
     padding: 0;
 }
 
-/* ------------------Estilo del header y nav------------------*/
 
+/* Estilos generales y fuentes */
 a{
     color: #252422;
     text-decoration: none;
@@ -27,6 +27,9 @@ p{
     font-family: 'Ubuntu', sans-serif;
     font-size: medium;
 }
+ul{
+    list-style-type: none;
+}
 li{
     font-family: 'Ubuntu', sans-serif;
     font-size: large;
@@ -43,25 +46,32 @@ iframe{
     width: 3.5rem;
     height: 3.5rem;
 }
+
+/* ------------------Estilo del header y nav------------------*/
+
 /* Establezco el tamaño de fuente en 0px
     ya que queda espacio entre divs y
     alineo horizontalmente al centro cada uno*/
 header{
-    background-color: #252422;
-    text-align: center;
-    font-size: 0px; 
-    height: 8rem;
-    width: 100%;
     position: sticky;
     top: 0%;
     left: 0%;
     z-index: 20;
+
+    background-color: #252422;
+    text-align: center;
+    font-size: 0px; 
+    
+    height: 6rem;
+    width: 100%;
 }
 header nav{
     position: relative; 
     top: 0%;
     left: 0%;
+    
     height: 100%;
+    width: 100%;
 /*  Utilizando flex, la alineación vertical
     se hace con dos lineas:
     display: flex;
@@ -71,43 +81,45 @@ header nav{
 ocupa el 25% del nav*/
 .navBar_div_logo{
     position: absolute;
+    top: 20%;
+    left: 0%;
+    
     display: inline-block;
     width: 25%;
     height: 100%;
-    left: 0%;
     overflow: hidden;
 }
 /* El apartado de opciones comienza al 75%
 y ocupa el 25% del nav*/
 .navBar_div_opciones{
     position: absolute;
+    top: 30%;
+    left: 75%;
+    
     display: inline-block;
     width: 25%;
     height: 100%;
-    left: 75%;
     overflow: hidden;
 }
 /* La lista del navbar ocupa el 50% central
 a partir del 25%*/
 .navBar_div_list{
     position: absolute;
-    display: inline-block;
-    width: 50%;
     top: 35%;
     left: 25%;
+
+    display: inline-block;
+    width: 50%;
 }
 /* Cada elemento de la lista del nav*/
 body header nav div.navBar_div_list ul li{
-    list-style-type: none;
     display: inline-block;
     padding-left: 10%;
 }
 /* Estilo del logo*/
 .navBar_logo{
-    height: 100%;
     width: 14rem;
-    max-height: 4rem;
-    margin: 2rem 100% 2rem 8%;
+    height: 4rem;
 }
 /* Estilo de los enlaces*/
 .navBar_a{
@@ -116,14 +128,16 @@ body header nav div.navBar_div_list ul li{
 }
 /* Estilo del icono del apartado de opciones*/
 .navBar_opciones{
-    height: 100%;
+    position: relative;
+    left: 40%;
+    height: 2rem;
     width: 2rem;
-    max-height: 2rem;
-    margin: 3rem 16% 2rem 80%;
 }
 
 /* ------------------Parallax------------------*/
 
+/* Establezco un alto de fondo de 40rem con tres secciones para el index
+Utilizo fondos de color solido para optimizar el contraste.*/
 .parallax{
 	background-attachment: fixed;
 	background-position: center;
@@ -141,14 +155,21 @@ body header nav div.navBar_div_list ul li{
 .back-tres{background-color: #403d39;}
 
 /* ------------------Secciones index------------------*/
+
+/* Barra de navegación de secciones del index flotante.
+Le establecí color de fondo azul para que se vea ya que 
+necesito darle cambios de color entre secciones y aun 
+no lo vimos*/
 main div.floatingBar{
-    background-color: blue;
     position: fixed;
-    left: 90%;
     top: 90%;
+    left: 90%;
+    background-color: blue;
     z-index: 20;
     width: 5%;
 }
+
+/* Tamaño y colores de texto de las secciones*/
 main section#overview{
     height: 40rem;
 }
@@ -163,34 +184,44 @@ main section#research{
 .articleSectionMain{
     height: 100%;
 }
+/* A los div les centro el texto y les doy el maximo tamaño*/
 .divSectionMain{
    text-align: center;
    height: 100%;
    width: 100%;
 }
 
+/* Ubico imagen anexa de fondo (ADN dorado)*/
 .divImagenFondoIzquierda{
     position: absolute;
-    left: 0%;
     top: 0%;
+    left: 0%;
 }
+
+/* -----------Seccion about_us-----------*/
+
+/* z index mayor para que pise a la imagen de fondo anexa*/
 main section#about_us article div div.separation{
     position: relative;
     z-index: 10;
 }
+/* Tamaño y box modeling de las imágenes circulares*/
 main section#about_us article div div.separation img{
+    border-radius: 50%;
     width: 15rem;
     height: 15rem;
-    border-radius: 50%;
     padding-right: 2rem;
     padding-left: 2rem;
 }
+/* Posicion y tamaño de los p.
+z-index mayor para que pise imagen de fondo anexa*/
 main section#about_us article div p{
     position: relative;
     left: 25%;
     width: 50%;
     z-index: 10;
 }
+/* Estilo de lista de disciplinas*/
 main section#about_us article div div ul li{
     display: inline-block;
     background-color: #eb5e28;
@@ -199,6 +230,7 @@ main section#about_us article div div ul li{
     height: 4rem;
     width: 8rem;
 }
+/* Estilo de enlaces de la lista de disciplinas*/
 main section#about_us article div div ul li a{
     position: relative;
     top: 30%;
@@ -206,47 +238,56 @@ main section#about_us article div div ul li a{
     font-size: large;
 }
 
+/* -----------Sección research-----------*/
+
+/* Estilo de lista con scroll vertical*/
 main section#research article div div ul{
-    list-style-type: none;
     position: relative;
     left: 5%;
     width: 90%;
     height: 20rem;
     overflow-y: scroll;
 }
+/* Estilo de elementos de lista*/
 main section#research article div div ul li{
     border: 4px groove #ccc5b9;
     padding-top: 1.5%;
     padding-bottom: 1.5%;
 }
+/* Elementos ubicados a la izquierda dentro de un elemento de lista*/
 .izquierda{
-    display: inline-block;
     position: relative;
-    left: 0%;
     top: 0%;
+    left: 0%;    
+    display: inline-block;
     width: 20rem;
     overflow: hidden;
 }
+/* Elementos ubicados a la derecha dentro de un elemento de lista*/
 .derecha{
-    display: inline-block;
     position: relative;
     top: 0%;
     left: 1%;
+    display: inline-block;
     width: 55%;
 }
+/* Tamaño de imagenes dentro de la lista*/
 main section#research article div div ul li a img{
     width: 15rem;
     height: 15rem;
 }
+/* Configuración del texto dentro de la lista*/
 main section#research article div div ul li p{
     text-align: justify;
 }
 
 /* ------------------Footer------------------*/
 
+/* z-index mayor para que pise secciones y bar flotante*/
 footer div{
     z-index: 40;
 }
+/* division de lista horizontal de logos (naranja)*/
 .divLogoFooter{
     position: relative;
     top: 0%;
@@ -261,7 +302,7 @@ footer div{
     display: flex;
     align-items: center; */
 }
-
+/* elemento de lista de logos*/
 .liLogoFooter
 {
     height: 100%;
@@ -269,6 +310,7 @@ footer div{
     width: 20%;
     top: 20%;
 }
+/*posiciones de logos*/
 .logoLN{
     position: absolute;
     left: 0%;
@@ -289,113 +331,112 @@ footer div{
     position: absolute;
     left: 80%;
 }
-
-
+/* Div final, que contiene 3 div (Logo, listas, logos)*/
 .divFin{
-    background-color: #ccc5b9;
-    height: 24rem;
     position: relative;
     top: 0%;
     left: 0%;
+    background-color: #ccc5b9;
+    height: 24rem;
 }
+/* Estilo de las tres divisiones (Logo, listas, logos)*/
 .brioplant_footer{
-    width: 25%;
     position: absolute;
     left: 0%;
+    width: 25%;
     height: 100%;
 }
 .info_footer{
-    width: 50%;
     position: absolute;
     left: 25%;
+    width: 50%;
     height: 100%;
 }
 .insti_footer{
-    width: 25%;
     position: absolute;
     left: 75%;
+    width: 25%;
     height: 100%;
 }
+/* Estilo de logo BrioPlant primer div*/
 footer div div.brioplant_footer img{
     position: absolute;
+    top: 15%;
+    left: 30%;
     width: 13rem;
     height: 14rem;
-    left: 30%;
-    top: 15%;
+
 }
+/* Estilo texto debajo del logo BrioPlant*/
 footer div div.brioplant_footer p{
     position: absolute;
-    left: 40%;
     top: 75%;
+    left: 40%;
 }
+
+/* Estilo de logos de auspiciantes*/
 .logoIAL{
     position: absolute;
+    top: 20%;
+    left: 0%;
     width: 10rem;
     height: 5rem;
-    left: 0%;
-    top:20%;
 }
 .logoBGI{
     position: absolute;
+    top: 20%;
+    left: 50%;
     width: 10rem;
     height: 5rem;
-    left: 50%;
-    top:20%;
 }
 .logoUNER{
     position: absolute;
+    top: 60%;
+    left: 0%;
     width: 10rem;
     height: 5rem;
-    left: 0%;
-    top: 60%
 }
 .logoCoderhouse{
     position: absolute;
+    top: 60%;
+    left: 50%;
     width: 11rem;
     height: 4rem;
-    left: 50%;
-    top: 60%;
 }
 
+/* Estilo de div que contienen las listas*/
 .div_footer_databases{
-    display: inline-block;
     position: absolute;
-    left: 30%;
-    width: 33.33%;
     top: 30%;
+    left: 30%;
+    display: inline-block;
+    width: 33.33%;
 }
 .div_footer_softwares{
-    display: inline-block;
     position: absolute;
-    left: 45%;
-    width: 33.33%;
     top: 30%;
+    left: 45%;
+    display: inline-block;
+    width: 33.33%;
 }
 .div_footer_info{
-    display: inline-block;
     position: absolute;
-    left: 60%;
-    width: 33.33%;
     top: 30%;
+    left: 60%;
+    display: inline-block;
+    width: 33.33%;
 }
-footer div div ul.list_footer_databases{
-    list-style-type: none;
-}
-footer div div ul.list_footer_softwares{
-    list-style-type: none;
-}
-footer div div ul.list_footer_info{
-    list-style-type: none;
-}
+/* Estilo y posición de barra horizontal*/
 footer div div.info_footer hr{
     position: absolute;
-    left: 30%;
     top: 35%;
+    left: 30%;
     width: 40%;
 }
 
 /* ------------------Lobby------------------*/
 
+/* Estilo del lobby*/
 #lobby{
     width: 100%;
     height: 46rem;
@@ -408,15 +449,18 @@ footer div div.info_footer hr{
     top: 0%;
     left: 0%;
 }
+/* Estilo de h2*/
 #lobby article div h2{
     text-align: center;
     color: #ccc5b9;
 }
+/* Estilo de lista vertical con scroll*/
 .listaVertical{
     width: 100%;
     height: 100%;
     overflow-y: scroll;
 }
+/* Posición de div que contiene lista vertical*/
 #lobby article div.playlists{
     position: absolute;
     top: 15rem;
@@ -424,21 +468,24 @@ footer div div.info_footer hr{
     width: 22rem;
     height: 20rem;
 }
+/* Posición de div que contiene información*/
 #lobby article div.data{
-    color: #ccc5b9;
     position: absolute;
-    text-align: center;
     top: 3rem;
     left: 35%;
+    color: #ccc5b9;
+    text-align: center;
     width: 30%;
 }
+/* Posición de boton con referencia al home*/
 #lobby article div.data div button{
     position: absolute;
+    top: 31rem;
+    left: 11.5rem;
     width: 6rem;
     height: 2rem;
-    left: 11.5rem;
-    top: 31rem;
 }
+/* Posición de div que contiene lista vertical*/
 #lobby article div.songs{
     position: absolute;
     top: 15rem;
@@ -446,6 +493,7 @@ footer div div.info_footer hr{
     width: 22rem;
     height: 20rem;
 }
+/* Estilo de elementos de la lista ajustado al contenido*/
 #lobby article div ul li{
     width: fit-content;
     height: fit-content;
