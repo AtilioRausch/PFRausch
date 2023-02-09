@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Para esta pre-entrega me centré en aplicar lo visto hasta el momento, SIN FLEX y sin 
-utilizar códigos externos (solo un estilo de botón en lobby) para poder entender y practicar
-el uso de las posiciones. Los demás estilos y flex los añadiré en próximas entregas.
-Aclaro ya que el CSS principal (styles.css) quedó extenso ya que ubiqué con position y
-con flex se hace en dos lineas. 
-El estilo del boton utilizado en Lobby se encuentra en styles_externos.css. -->
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
     <link rel="shortcut icon" href="./images/favicon.png">
+    <!-- Title -->
     <title>BrioPlants - Global</title>
 
-    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- Oswald Medium 500 -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,27 +26,30 @@ El estilo del boton utilizado en Lobby se encuentra en styles_externos.css. -->
 
 <body>
     <header>
-        <nav>
-            <div class="navBar_div_logo">
-                <a href="./index.html">
-                    <img class="navBar_logo" src="./images/logo_navbar.png" alt="Logo de grupo - BrioPlants">
-                </a>
-            </div>
-            <div class="navBar_div_list">
-                <ul>
-                    <li><a class="navBar_a" href="./pages/softwares.html">Softwares</a></li>
-                    <li><a class="navBar_a" href="./pages/databases.html">Databases</a></li>
-                    <li><a class="navBar_a" href="./pages/lobby.html">Lobby</a></li>
-                    <li><a class="navBar_a" href="./pages/contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="navBar_div_opciones">
-                <img class="navBar_opciones"src="./images/opciones_navbar.png" alt="Menú de opciones">
+        <nav class="widthAndHeightMax">
+            <div class="widthAndHeightMax flex_container_navBar">
+                <div class="container_1_navBar">
+                    <a href="./index.html">
+                        <img class="logoWide" src="./images/logo_navbar.png" alt="Logo de grupo - BrioPlants">
+                    </a>
+                </div>
+                <div class="container_2_navBar">
+                    <ul class="list_navBar">
+                        <li><a class="navBar_a" href="./pages/softwares.html">Softwares</a></li>
+                        <li><a class="navBar_a" href="./pages/databases.html">Databases</a></li>
+                        <li><a class="navBar_a" href="./pages/lobby.html">Lobby</a></li>
+                        <li><a class="navBar_a" href="./pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="container_3_navBar">
+                    <img class="imgSmall" src="./images/opciones_navbar.png" alt="Menú de opciones">
+                </div>
             </div>
         </nav>
     </header>
 
     <main>
+
         <div class="floatingBar">
             <ul>
                 <li><a href="./index.html#overview">Overview</a></li>
@@ -66,6 +65,7 @@ El estilo del boton utilizado en Lobby se encuentra en styles_externos.css. -->
                     <img src="https://i0.wp.com/evalparticipativa.net/wp-content/uploads/2020/06/43629498_1678098508968761_4966370374850707456_n.jpg?resize=570%2C380&ssl=1" alt="En desarrollo">
                 </div>
             </article>
+
         </section>
         <section id="about_us">
             <article class="articleSectionMain">
