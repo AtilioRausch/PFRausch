@@ -55,8 +55,10 @@ iframe{
     height: 2rem;
 }
 .logoMedium{
-    width: 10rem;
-    height: 5rem;
+    width: 70%;
+    height: 100%;
+    min-width: 8rem;
+    min-height: 3rem;
 }
 .widthAndHeightMax{
     width: 100%;
@@ -296,8 +298,10 @@ footer{
     align-items: center;
 }
 .logo_brioplants img{
-    width: 16rem;
-    height: 16rem;
+    width: 50%;
+    height: 70%;
+    min-width: 15rem;
+    min-height: 8rem;
 }
 
 .list_footer_container{
@@ -329,14 +333,8 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
-.logoUNER{
-    width: 12rem;
-    height: 5rem;
-}
-.logoCoder{
-    width: 12rem;
-    height: 4rem;
+    padding-right: 1rem;
+    overflow: hidden;
 }
 .copyright{
     grid-area: copyright;
