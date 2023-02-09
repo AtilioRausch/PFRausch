@@ -38,9 +38,13 @@ iframe{
     width: 20rem;
     height: 10rem;
 }
-.separation{
+.separationVertical{
     padding-top: 2%;
     padding-bottom: 2%;
+}
+.separationHorizontal{
+    padding-left: 2%;
+    padding-right: 2%;
 }
 .imgSmall{
     width: 2rem;
@@ -48,7 +52,11 @@ iframe{
 }
 .logoWide{
     width: 11rem;
-    height: 3rem;
+    height: 2rem;
+}
+.logoMedium{
+    width: 10rem;
+    height: 5rem;
 }
 .widthAndHeightMax{
     width: 100%;
@@ -62,50 +70,48 @@ header{
     top: 0%;
     left: 0%;
 
+    width: 100%;
     height: 4rem;
 
     background-color: #252422;
     z-index: 20;
 }
 
-.flex_container_navBar{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.grid_container_navBar{
+    display: grid;
+    grid-template-areas: "a ul img";
+    grid-template-columns: 15% 70% 15%;
+    justify-items: center;
     align-items: center;
 }
 
-.container_1_navBar {
-    flex: 3 1 auto;
-
-    padding-left: 1%;
-}
-.container_2_navBar {
-    flex: 3 1 auto;
-}
-.container_3_navBar {
-    display: flex;
-    flex: 3 1 auto;
-    justify-content: end;
-
-    padding-right: 1%;
+body header nav a{
+    justify-self: start;
+    padding-left: 2rem;
 }
 
-.list_navBar{
+body header nav ul{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    column-gap: 15%;
+    column-gap: 5%;
 }
-
-/* Estilo de los enlaces*/
-body header nav div.container_2_navBar a{
+body header nav img{
+    justify-self: end;
+    padding-right: 2rem;
+}
+/* Estilo de los enlaces*/  
+body header nav ul li a{
     color: #fffcf2;
     font-size: 130%;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
-
+body header nav ul li a:hover{
+    background-color:#eb5e28;
+}
 /* ------------------Parallax------------------*/
 
 /* Establezco un alto de fondo de 40rem con tres secciones para el index
@@ -158,9 +164,9 @@ main section#research{
 }
 /* A los div les centro el texto y les doy el maximo tamaño*/
 .divSectionMain{
-   text-align: center;
-   height: 100%;
-   width: 100%;
+    text-align: center;
+    height: 100%;
+    width: 100%;
 }
 
 /* Ubico imagen anexa de fondo (ADN dorado)*/
@@ -254,156 +260,89 @@ main section#research article div div ul li p{
 }
 
 /* ------------------Footer------------------*/
-
-/* z-index mayor para que pise secciones y bar flotante*/
-footer div{
-    z-index: 40;
-}
-/* division de lista horizontal de logos (naranja)*/
-.divLogoFooter{
+footer{
     position: relative;
-    top: 0%;
     left: 0%;
-    text-align: center;
-    background-color: #eb5e28;
-    font-size: 0%;
-    height: 6rem;
+    top: 0%;
+    background-color:#ccc5b9;
+    z-index: 40;   
+}
+.grid_container_footer{
+    height: 30rem;
     width: 100%;
-    /*  Utilizando flex, la alineación vertical
-    se hace con dos lineas:
+    display: grid;
+    grid-template-areas: 
+    'social social social'
+    'logo list_data institutions'
+    'copyright copyright copyright';
+    grid-template-rows: 20% 72% 8%;
+    grid-template-columns: 25% auto 25%;
+}
+
+.social_networks_list{
+    grid-area: social;
+    background-color:#eb5e28;
     display: flex;
-    align-items: center; */
-}
-/* elemento de lista de logos*/
-.liLogoFooter
-{
-    height: 100%;
-    display: inline-block;
-    width: 20%;
-    top: 20%;
-}
-/*posiciones de logos*/
-.logoLN{
-    position: absolute;
-    left: 0%;
-}
-.logoTW{
-    position: absolute;
-    left: 20%;
-}
-.logoEMAIL{
-    position: absolute;
-    left: 40%;
-}
-.logoGIT{
-    position: absolute;
-    left: 60%;
-}
-.logoSP{
-    position: absolute;
-    left: 80%;
-}
-/* Div final, que contiene 3 div (Logo, listas, logos)*/
-.divFin{
-    position: relative;
-    top: 0%;
-    left: 0%;
-    background-color: #ccc5b9;
-    height: 24rem;
-}
-/* Estilo de las tres divisiones (Logo, listas, logos)*/
-.brioplant_footer{
-    position: absolute;
-    left: 0%;
-    width: 25%;
-    height: 100%;
-}
-.info_footer{
-    position: absolute;
-    left: 25%;
-    width: 50%;
-    height: 100%;
-}
-.insti_footer{
-    position: absolute;
-    left: 75%;
-    width: 25%;
-    height: 100%;
-}
-/* Estilo de logo BrioPlant primer div*/
-footer div div.brioplant_footer img{
-    position: absolute;
-    top: 15%;
-    left: 30%;
-    width: 13rem;
-    height: 14rem;
-
-}
-/* Estilo texto debajo del logo BrioPlant*/
-footer div div.brioplant_footer p{
-    position: absolute;
-    top: 75%;
-    left: 40%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-/* Estilo de logos de auspiciantes*/
-.logoIAL{
-    position: absolute;
-    top: 20%;
-    left: 0%;
-    width: 10rem;
-    height: 5rem;
+.logo_brioplants{
+    grid-area: logo;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-.logoBGI{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    width: 10rem;
-    height: 5rem;
+.logo_brioplants img{
+    width: 16rem;
+    height: 16rem;
+}
+
+.list_footer_container{
+    grid-area: list_data;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    margin-top: 5rem;
+}
+.list_footer_container p{
+    font-size: 1.3rem;
+    border-bottom: #252422 solid 2px;
+}
+
+.list_institutions{
+    grid-area: institutions;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.list_institutions_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.list_institutions_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .logoUNER{
-    position: absolute;
-    top: 60%;
-    left: 0%;
-    width: 10rem;
+    width: 12rem;
     height: 5rem;
 }
-.logoCoderhouse{
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    width: 11rem;
+.logoCoder{
+    width: 12rem;
     height: 4rem;
 }
-
-/* Estilo de div que contienen las listas*/
-.div_footer_databases{
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    display: inline-block;
-    width: 33.33%;
-}
-.div_footer_softwares{
-    position: absolute;
-    top: 30%;
-    left: 45%;
-    display: inline-block;
-    width: 33.33%;
-}
-.div_footer_info{
-    position: absolute;
-    top: 30%;
-    left: 60%;
-    display: inline-block;
-    width: 33.33%;
-}
-/* Estilo y posición de barra horizontal*/
-footer div div.info_footer hr{
-    position: absolute;
-    top: 35%;
-    left: 30%;
-    width: 40%;
+.copyright{
+    grid-area: copyright;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    height: fit-content;
 }
 
 /* ------------------Lobby------------------*/
