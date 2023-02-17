@@ -3,69 +3,227 @@
 /*
 *  html5resetcss
 */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
-body{line-height:1}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-nav ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:before,blockquote:after,q:before,q:after{content:none}
-a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
-ins{background-color:#ff9;color:#000;text-decoration:none}
-mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
-del{text-decoration:line-through}
-abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
-table{border-collapse:collapse;border-spacing:0}
-hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
-input,select{vertical-align:middle}
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+
+body {
+    line-height: 1
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+nav ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none
+}
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold
+}
+
+del {
+    text-decoration: line-through
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0
+}
+
+input,
+select {
+    vertical-align: middle
+}
 
 
 /* Estilos generales y fuentes */
-a{
+a {
     color: #252422;
     text-decoration: none;
 }
-h1{
+
+h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
 }
-h2{
+
+h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 1.75rem;
 }
-h3{
+
+h3 {
     font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
 }
-p{
+
+p {
     font-family: 'Ubuntu', sans-serif;
     font-size: medium;
 }
-ul{
+
+ul {
     list-style-type: none;
 }
-li{
+
+li {
     font-family: 'Ubuntu', sans-serif;
     font-size: 90%;
 }
-iframe{
+
+iframe {
     width: 20rem;
     height: 10rem;
 }
-.separationVertical{
+
+.separationVertical {
     padding-top: 2%;
     padding-bottom: 2%;
 }
-.separationHorizontal{
+
+.separationHorizontal {
     padding-left: 2%;
     padding-right: 2%;
 }
-.imgSmall{
+
+.imgSmall {
     min-width: 1.5rem;
     min-height: 1.5rem;
     max-width: 2.5rem;
-    max-height: 2.5rem;    
+    max-height: 2.5rem;
 }
-.logoWide{
+
+.logoWide {
     width: 80%;
     height: 40%;
     min-width: 6rem;
@@ -73,18 +231,28 @@ iframe{
     max-width: 12rem;
     max-height: 4rem;
 }
-.logoMedium{
+
+.logoMedium {
     width: 8rem;
     height: 3.5rem;
 }
-.widthAndHeightMax{
+
+.widthAndHeightMax {
     width: 100%;
     height: 100%;
+}
+.fullScreen{
+    height: 100vh;
+    width: 100%;
+}
+.row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
 }
 
 /* ------------------Estilo del header y nav------------------*/
 
-header{
+header {
     position: sticky;
     top: 0%;
     left: 0%;
@@ -96,26 +264,26 @@ header{
     z-index: 20;
 }
 
-.medium-screen-options{
+.medium-screen-options {
     display: none;
 }
 
-.grid-container-navBar{
+.grid-container-navBar {
     display: grid;
-    grid-template-areas: ".link-logo-nav .large-screen-options svg";
+    grid-template-areas: ".link-logo-nav .large-screen-options button";
     grid-template-columns: 25% 50% 25%;
     justify-items: center;
     align-items: center;
 }
 
-.link-logo-nav{
+.link-logo-nav {
     justify-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-body header nav ul{
+body header nav ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -123,38 +291,94 @@ body header nav ul{
     flex-wrap: wrap;
     column-gap: 5%;
 }
-body header nav svg{
-    color: #ccc5b9;
+
+body header nav button{
+    background-color: transparent;
     justify-self: end;
-    margin-right: 1rem;
+    height: 100%;
 }
-/* Estilo de los enlaces*/  
-body header nav ul li a{
+body header nav svg {
+    color: #eb5e28;
+}
+/* Estilo de los enlaces*/
+body header nav ul li a {
     color: #ccc5b9;
     font-size: 130%;
 }
-body header nav ul li a:hover{
-    background-color:#eb5e28;
+
+body header nav ul li a:hover {
+    background-color: #eb5e28;
 }
+
+
+.offcanvas{
+    color: #ccc5b9;
+    background-color: #252422;
+}
+.offcanvas-body-small{
+    display: none;
+}
+.btn-close{
+    height: 80%;
+    width: 10%;
+    --bs-btn-close-bg: none;
+    --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(235, 94, 40, 0.25);
+}
+.btn-close svg{
+    color: #eb5e28;
+}
+.list-side-bar{
+    text-align: center;
+}
+.list-side-bar li{
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+    margin-top: 2rem;
+    color: #ccc5b9;
+    --bs-list-group-border-radius: none;
+    --bs-list-group-border-width: none;
+    --bs-list-group-bg: #252422;
+    border-radius: none;
+}
+.list-side-bar li:hover{
+    background-color: #eb5e28;
+}
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.list-group-item.active {
+    color: var(--bs-list-group-active-color);
+    background-color:#eb5e28;
+    border-color: transparent;
+}
+
 /* ------------------Parallax------------------*/
 
 /* Establezco un alto de fondo de 40rem con tres secciones para el index
 Utilizo fondos de color solido para optimizar el contraste.*/
-.parallax{
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 40rem;
-	max-width: 100%;
-	position: relative;
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40rem;
+    max-width: 100%;
+    position: relative;
 }
-	
-.back-uno{background-color: #ccc5b9;}
 
-.back-dos{background-color: #252422;}
+.back-uno {
+    background-color: #ccc5b9;
+}
 
-.back-tres{background-color: #403d39;}
+.back-dos {
+    background-color: #252422;
+}
+
+.back-tres {
+    background-color: #403d39;
+}
 
 /* ------------------Secciones index------------------*/
 
@@ -162,44 +386,54 @@ Utilizo fondos de color solido para optimizar el contraste.*/
 Le establecí color de fondo azul para que se vea ya que 
 necesito darle cambios de color entre secciones y aun 
 no lo vimos*/
-.list-group{
+.float-bar {
     position: fixed;
     left: 92%;
     top: 60%;
     z-index: 30;
 }
-.list-group li a{
+
+.float-bar li a {
     color: #ccc5b9;
     font-size: 1.3rem;
 }
-.list-group-item.active{
+
+.float-bar-item.active {
     color: #eb5e28;
 }
 
 /* Tamaño y colores de texto de las secciones*/
-main section#overview{
-    height: 40rem;
+main section#overview {
+    padding-top: 4rem;
 }
-main section#about-us{
-    height: 45rem;
+main section#about-us {
+    padding-top: 4rem;
     color: #ccc5b9;
 }
-main section#research{
-    height: 40rem;
+main section#research {
+    padding-top: 4rem;
     color: #ccc5b9;
 }
-.articleSectionMain{
-    height: 100%;
-}
+
+/* -----------Seccion overview-----------*/
+/* main section#overview{
+    margin-top: 4rem;
+} */
+main section#overview article div img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+} 
+
 /* A los div les centro el texto y les doy el maximo tamaño*/
-.divSectionMain{
+.divSectionMain {
     text-align: center;
     height: 100%;
     width: 100%;
 }
 
 /* Ubico imagen anexa de fondo (ADN dorado)*/
-.divImagenFondoIzquierda{
+.divImagenFondoIzquierda {
     position: absolute;
     top: 0%;
     left: 0%;
@@ -208,28 +442,31 @@ main section#research{
 /* -----------Seccion about-us-----------*/
 
 /* z index mayor para que pise a la imagen de fondo anexa*/
-main section#about-us article div div.separation{
+main section#about-us article div div.separation {
     position: relative;
     z-index: 10;
 }
+
 /* Tamaño y box modeling de las imágenes circulares*/
-main section#about-us article div div.separation img{
+main section#about-us article div div.separation img {
     border-radius: 50%;
     width: 15rem;
     height: 15rem;
     padding-right: 2rem;
     padding-left: 2rem;
 }
+
 /* Posicion y tamaño de los p.
 z-index mayor para que pise imagen de fondo anexa*/
-main section#about-us article div p{
+main section#about-us article div p {
     position: relative;
     left: 25%;
     width: 50%;
     z-index: 10;
 }
+
 /* Estilo de lista de disciplinas*/
-main section#about-us article div div ul li{
+main section#about-us article div div ul li {
     display: inline-block;
     background-color: #eb5e28;
     padding-left: 1rem;
@@ -237,8 +474,9 @@ main section#about-us article div div ul li{
     height: 4rem;
     width: 8rem;
 }
+
 /* Estilo de enlaces de la lista de disciplinas*/
-main section#about-us article div div ul li a{
+main section#about-us article div div ul li a {
     position: relative;
     top: 30%;
     color: #ccc5b9;
@@ -248,113 +486,127 @@ main section#about-us article div div ul li a{
 /* -----------Sección research-----------*/
 
 /* Estilo de lista con scroll vertical*/
-main section#research article div div ul{
+main section#research article div div ul {
     position: relative;
     left: 5%;
     width: 90%;
     height: 20rem;
     overflow-y: scroll;
 }
+
 /* Estilo de elementos de lista*/
-main section#research article div div ul li{
+main section#research article div div ul li {
     border: 4px groove #ccc5b9;
     padding-top: 1.5%;
     padding-bottom: 1.5%;
 }
+
 /* Elementos ubicados a la izquierda dentro de un elemento de lista*/
-.izquierda{
+.izquierda {
     position: relative;
     top: 0%;
-    left: 0%;    
+    left: 0%;
     display: inline-block;
     width: 20rem;
     overflow: hidden;
 }
+
 /* Elementos ubicados a la derecha dentro de un elemento de lista*/
-.derecha{
+.derecha {
     position: relative;
     top: 0%;
     left: 1%;
     display: inline-block;
     width: 55%;
 }
+
 /* Tamaño de imagenes dentro de la lista*/
-main section#research article div div ul li a img{
+main section#research article div div ul li a img {
     width: 15rem;
     height: 15rem;
 }
+
 /* Configuración del texto dentro de la lista*/
-main section#research article div div ul li p{
+main section#research article div div ul li p {
     text-align: justify;
 }
 
 /* ------------------Footer------------------*/
-footer{
+footer {
     position: relative;
     left: 0%;
     top: 0%;
     background-color: #ccc5b9;
-    z-index: 40;   
+    z-index: 40;
 }
-.grid-container-footer{
+
+.grid-container-footer {
     height: 30rem;
     width: 100%;
     display: grid;
-    grid-template-areas: 
-    'social social social'
-    'brioplants list-data list-data'
-    'institutions institutions institutions'
-    'copyright copyright copyright';
+    grid-template-areas:
+        'social social social'
+        'brioplants list-data list-data'
+        'institutions institutions institutions'
+        'copyright copyright copyright';
     grid-template-columns: 30% 40% auto;
     grid-template-rows: 20% 50% auto 5%;
 }
 
-.social-networks-list{
+.social-networks-list {
     grid-area: social;
-    background-color:#eb5e28;
+    background-color: #eb5e28;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
-.logo-brioplants{
+
+.logo-brioplants {
     grid-area: brioplants;
     align-self: center;
-    justify-self: center;   
+    justify-self: center;
 }
-.logo-brioplants img{
+
+.logo-brioplants img {
     width: 10rem;
     height: 10rem;
 
 }
-.list-footer-container{
+
+.list-footer-container {
     grid-area: list-data;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
-.list-footer-container p{
+
+.list-footer-container p {
     font-size: 1.5rem;
     border-bottom: #252422 solid 2px;
     margin-bottom: 0.5rem;
 }
 
-.list-footer-container li{
+.list-footer-container li {
     padding-bottom: 0.2rem;
 }
-.list-footer-container li a{
+
+.list-footer-container li a {
     font-size: 1rem;
 }
-.list-footer-container a:hover{
+
+.list-footer-container a:hover {
     color: #eb5e28;
     text-decoration: underline;
 }
-.list-institutions{
+
+.list-institutions {
     grid-area: institutions;
+    overflow: hidden;
 }
 
-.copyright{
+.copyright {
     grid-area: copyright;
     margin-left: 1rem;
     margin-bottom: 1rem;
@@ -364,39 +616,44 @@ footer{
 /* ------------------Lobby------------------*/
 
 /* Estilo del lobby*/
-#lobby{
+#lobby {
     width: 100%;
     height: 46rem;
     background-image: url("../images/lobby-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
-#lobby article{
+
+#lobby article {
     position: relative;
     top: 0%;
     left: 0%;
 }
+
 /* Estilo de h2*/
-#lobby article div h2{
+#lobby article div h2 {
     text-align: center;
     color: #ccc5b9;
 }
+
 /* Estilo de lista vertical con scroll*/
-.listaVertical{
+.listaVertical {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
 }
+
 /* Posición de div que contiene lista vertical*/
-#lobby article div.playlists{
+#lobby article div.playlists {
     position: absolute;
     top: 15rem;
     left: 7%;
     width: 22rem;
     height: 20rem;
 }
+
 /* Posición de div que contiene información*/
-#lobby article div.data{
+#lobby article div.data {
     position: absolute;
     top: 3rem;
     left: 35%;
@@ -404,24 +661,27 @@ footer{
     text-align: center;
     width: 30%;
 }
+
 /* Posición de boton con referencia al home*/
-#lobby article div.data div button{
+#lobby article div.data div button {
     position: absolute;
     top: 31rem;
     left: 11.5rem;
     width: 6rem;
     height: 2rem;
 }
+
 /* Posición de div que contiene lista vertical*/
-#lobby article div.songs{
+#lobby article div.songs {
     position: absolute;
     top: 15rem;
     left: 70%;
     width: 22rem;
     height: 20rem;
 }
+
 /* Estilo de elementos de la lista ajustado al contenido*/
-#lobby article div ul li{
+#lobby article div ul li {
     width: fit-content;
     height: fit-content;
 }
@@ -430,92 +690,121 @@ footer{
 @media (max-width: 768px) {
 
     /* ------------------Estilo del header y nav------------------*/
-    .grid-container-navBar{
+    .grid-container-navBar {
         grid-template-areas: ".link-logo-nav .medium-screen-options svg";
     }
-    .large-screen-options{
+
+    .large-screen-options {
         display: none;
     }
-    .medium-screen-options{
+
+    .medium-screen-options {
         display: block;
     }
-    .btn{
+
+    .btn {
         background-color: transparent;
         padding: 0%;
         border: none;
         color: #ccc5b9;
         font-size: 130%;
     }
-    .btn:hover{
-        background-color:#eb5e28;
+
+    .btn:hover {
+        background-color: #eb5e28;
         border: none;
     }
-    .dropdown-menu{
+
+    .dropdown-menu {
         background-color: #252422;
     }
-    .dropdown-item{
+
+    .dropdown-item {
         color: #ccc5b9;
     }
-    .dropdown-item:active{
+
+    .dropdown-item:active {
         background-color: #eb5e28;
     }
+    /* ------------------Main Index------------------*/
+
+    main section#overview article div img{
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    } 
+    
     /* ------------------Footer------------------*/
-    .grid-container-footer{
+    .grid-container-footer {
         height: 35rem;
-        grid-template-areas: 
-        'social social social'
-        'brioplants list-data list-data'
-        'institutions institutions institutions'
-        'copyright copyright copyright';
+        grid-template-areas:
+            'social social social'
+            'brioplants list-data list-data'
+            'institutions institutions institutions'
+            'copyright copyright copyright';
         grid-template-columns: 30% 40% auto;
         grid-template-rows: 20% 50% auto 7%;
     }
-    .copyright p{
+
+    .copyright p {
         font-size: 1rem;
     }
 }
 
 @media (max-width: 576px) {
-    
+
     /* ------------------Estilo del header y nav------------------*/
-    .grid-container-navBar{
+    .grid-container-navBar {
         grid-template-areas: ".link-logo-nav .medium-screen-options";
         grid-template-columns: 50% 50%;
-    }   
-    .medium-screen-options{
+    }
+
+    .medium-screen-options {
         display: none;
     }
-    .grid-container-navBar{
+
+    .grid-container-navBar {
         grid-template-areas: ".link-logo-nav svg";
         grid-template-columns: 50% 50%;
     }
-    /* ------------------Footer------------------*/
-    .grid-container-footer{
-        height: 40rem;
-        grid-template-areas: 
-        'social'
-        'list-data'
-        'institutions'
-        'brioplants'
-        'copyright';
-        grid-template-columns: 100%;
-        grid-template-rows: 20% 30% 10% auto 6%;
+    .offcanvas-body-small{
+        display: block;
     }
-    .logoMedium{
+    .offcanvas-body-medium-large{
+        display: none;
+    }
+    /* ------------------Footer------------------*/
+    .grid-container-footer {
+        height: 40rem;
+        grid-template-areas:
+            'social'
+            'list-data'
+            'institutions'
+            'brioplants'
+            'copyright';
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 30% 15% auto 6%;
+    }
+
+    .logoMedium {
         width: 6.2rem;
         height: 3rem;
     }
-    .logo-brioplants img{
+
+    .logo-brioplants img {
         width: 8rem;
         height: 8rem;
     }
-    .list-footer-container p{
+
+    .list-footer-container p {
         font-size: 1rem;
     }
-    .list-footer-container li a{
+
+    .list-footer-container li a {
         font-size: 0.8rem;
     }
-    .copyright p{
-    font-size: 0.8rem;
+
+    .copyright p {
+        font-size: 0.8rem;
     }
 }
