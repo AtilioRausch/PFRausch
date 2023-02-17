@@ -11,7 +11,7 @@
     <!-- Title -->
     <title>BrioPlants - Global</title>
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- Oswald Medium 500 -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Ubuntu:wght@300&display=swap"
         rel="stylesheet">
+    
+    <!--Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!--Boostrap icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
@@ -29,41 +33,63 @@
 
 <body>
     <header>
-        <nav class="widthAndHeightMax grid_container_navBar">
-            <a href="./index.html">
-                <img class="logoWide" src="./images/logo_navbar.png" alt="Logo de grupo - BrioPlants">
+        <nav class="widthAndHeightMax grid-container-navBar">
+            <a class="link-logo-nav" href="./index.html">
+                <img class="logoWide" src="./images/logo-navbar.png" alt="Logo de grupo - BrioPlants">
             </a>
-            <ul class="widthAndHeightMax">
+            <ul class="large-screen-options widthAndHeightMax">
                 <li><a href="./pages/softwares.html">Softwares</a></li>
                 <li><a href="./pages/databases.html">Databases</a></li>
                 <li><a href="./pages/lobby.html">Lobby</a></li>
                 <li><a href="./pages/contact.html">Contact</a></li>
             </ul>
-            <img class="imgSmall" src="./images/opciones_navbar.png" alt="Menú de opciones">
+
+            <div class="medium-screen-options dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Utilities
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="./pages/softwares.html">Softwares</a></li>
+                    <li><a class="dropdown-item" href="./pages/databases.html">Databases</a></li>
+                    <li><a class="dropdown-item" href="./pages/lobby.html">Lobby</a></li>
+                    <li><a class="dropdown-item" href="./pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <svg class="widthAndHeightMax imgSmall" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
         </nav>
     </header>
 
     <main>
 
-        <div class="floatingBar">
-            <ul>
-                <li><a href="./index.html#overview">Overview</a></li>
-                <li><a href="./index.html#about_us">About us</a></li>
-                <li><a href="./index.html#research">Research</a></li>
-            </ul>
+        <div class="list-group">
+            <li class="list-group-item">
+                <a href="#overview" class="list-group-item-action" id="item1">Overview</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#about-us" class="list-group-item-action" id="item2">About us</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#research" class="list-group-item-action" id="item3">Research</a>
+            </li>
         </div>
 
-        <section id="overview">
+        <section id="overview" class="section">
             <article class="articleSectionMain">
                 <div class="parallax back-uno divSectionMain">
                     <h1 class="separation">BrioPlants center</h1>
-                    <img src="https://i0.wp.com/evalparticipativa.net/wp-content/uploads/2020/06/43629498_1678098508968761_4966370374850707456_n.jpg?resize=570%2C380&ssl=1"
+                    <img src="https://i0.wp.com/evalparticipativa.net/wp-content/uploads/2020/06/43629498-1678098508968761-4966370374850707456-n.jpg?resize=570%2C380&ssl=1"
                         alt="En desarrollo">
                 </div>
             </article>
 
         </section>
-        <section id="about_us">
+        <section id="about-us" class="section">
             <article class="articleSectionMain">
                 <div class="parallax back-dos divSectionMain">
                     <h2 class="separation">Work group</h2>
@@ -71,23 +97,25 @@
                         <img src="./images/adnDorado.png" alt="Hebra de ADN dorada">
                     </div>
                     <div class="separation">
-                        <img src="https://i0.wp.com/evalparticipativa.net/wp-content/uploads/2020/06/43629498_1678098508968761_4966370374850707456_n.jpg?resize=570%2C380&ssl=1"
+                        <img src="https://i0.wp.com/evalparticipativa.net/wp-content/uploads/2020/06/43629498-1678098508968761-4966370374850707456-n.jpg?resize=570%2C380&ssl=1"
                             alt="Integrante 1">
-                        <img src="https://i0.wp.com/evalparticipativa.net/wp-content/uploads/2020/06/43629498_1678098508968761_4966370374850707456_n.jpg?resize=570%2C380&ssl=1"
+                        <img src="https://i0.wp.com/evalparticipativa.net/wp-content/uploads/2020/06/43629498-1678098508968761-4966370374850707456-n.jpg?resize=570%2C380&ssl=1"
                             alt="Integrante 2">
-                        <img src="https://i0.wp.com/evalparticipativa.net/wp-content/uploads/2020/06/43629498_1678098508968761_4966370374850707456_n.jpg?resize=570%2C380&ssl=1"
+                        <img src="https://i0.wp.com/evalparticipativa.net/wp-content/uploads/2020/06/43629498-1678098508968761-4966370374850707456-n.jpg?resize=570%2C380&ssl=1"
                             alt="Integrante 3">
-                        <img src="https://i0.wp.com/evalparticipativa.net/wp-content/uploads/2020/06/43629498_1678098508968761_4966370374850707456_n.jpg?resize=570%2C380&ssl=1"
+                        <img src="https://i0.wp.com/evalparticipativa.net/wp-content/uploads/2020/06/43629498-1678098508968761-4966370374850707456-n.jpg?resize=570%2C380&ssl=1"
                             alt="Integrante 4">
                     </div>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis animi eligendi vitae? Officia enim
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis animi eligendi vitae? Officia
+                        enim
                         quia sint dignissimos veritatis illo inventore impedit suscipit, incidunt fuga nisi aliquid
                         possimus reprehenderit quasi explicabo!
                         Non ea excepturi fugiat id voluptates dolores culpa earum numquam beatae distinctio.
                         Consequuntur qui ex dolorem repellat saepe at, numquam itaque, excepturi quos dolores eius
                         necessitatibus enim consequatur, facere quasi?
-                        Minima error ad totam libero facere aperiam unde nemo, quis corrupti, corporis, deleniti rerum
+                        Minima error ad totam libero facere aperiam unde nemo, quis corrupti, corporis, deleniti
+                        rerum
                         doloribus autem natus asperiores odit accusantium iure qui at odio in eveniet. Ipsam quis
                         dolorum eligendi.
                     </p>
@@ -95,7 +123,7 @@
                         <h3 class="separation">Scientific subjects</h3>
                         <ul>
 
-                            <li><a href="http://www.esc.biologia.efn.uncor.edu/?page_id=69" target="_blank">Biology</a>
+                            <li><a href="http://www.esc.biologia.efn.uncor.edu/?page-id=69" target="_blank">Biology</a>
                             </li>
                             <li><a href="http://ingenieria.uner.edu.ar/index.php/carreras-de-grado/bioinformatica"
                                     target="_blank">Bioinformatic</a></li>
@@ -107,7 +135,7 @@
                 </div>
             </article>
         </section>
-        <section id="research">
+        <section id="research" class="section">
             <article class="articleSectionMain">
                 <div class="parallax back-tres divSectionMain">
                     <h2 class="separation">Articles</h2>
@@ -118,13 +146,17 @@
                         Veniam nesciunt aliquam quia pariatur sunt eaque laborum, a quibusdam doloribus illum
                         repudiandae ut aliquid temporibus sint culpa.
                         Modi dolor, adipisci temporibus, obcaecati, similique laborum accusamus itaque deserunt illo
-                        vitae suscipit sed quia nemo fuga ratione. Eaque impedit suscipit ut nobis sit voluptates nam
+                        vitae suscipit sed quia nemo fuga ratione. Eaque impedit suscipit ut nobis sit voluptates
+                        nam
                         vel dicta autem provident!
-                        Omnis, animi modi. Doloribus sapiente porro culpa laboriosam accusamus, est dolorum voluptates
+                        Omnis, animi modi. Doloribus sapiente porro culpa laboriosam accusamus, est dolorum
+                        voluptates
                         aliquid consequatur amet cum possimus accusantium asperiores saepe eligendi? Dolorem autem
                         magnam veniam voluptatibus est voluptas recusandae. Et!
-                        Quidem mollitia rem explicabo voluptas facilis! Iusto asperiores id repudiandae, aliquam nam at
-                        perferendis quam omnis inventore ullam beatae aut cum, ut porro minima veniam voluptates quia.
+                        Quidem mollitia rem explicabo voluptas facilis! Iusto asperiores id repudiandae, aliquam nam
+                        at
+                        perferendis quam omnis inventore ullam beatae aut cum, ut porro minima veniam voluptates
+                        quia.
                         Accusamus, impedit modi?</p>
                     <div class="separation">
                         <ul>
@@ -137,21 +169,29 @@
                                     </a>
                                 </div>
                                 <div class="derecha">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, commodi ut.
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, commodi
+                                        ut.
                                         Quod aperiam, enim voluptatibus sed, natus excepturi reiciendis doloribus
                                         repudiandae obcaecati error impedit quaerat. Nostrum hic velit iusto modi.
-                                        Quo, corporis? Quo quia quae impedit suscipit, doloribus vero veniam alias ea
-                                        maxime quibusdam nemo voluptas magni earum facilis itaque mollitia, asperiores
+                                        Quo, corporis? Quo quia quae impedit suscipit, doloribus vero veniam alias
+                                        ea
+                                        maxime quibusdam nemo voluptas magni earum facilis itaque mollitia,
+                                        asperiores
                                         voluptatum est corrupti deleniti atque consequatur id? Rem.
-                                        Aliquid itaque harum ut veritatis cumque asperiores veniam molestiae suscipit
-                                        facere mollitia iure dolor nobis eum perspiciatis, rem quis, porro culpa omnis
+                                        Aliquid itaque harum ut veritatis cumque asperiores veniam molestiae
+                                        suscipit
+                                        facere mollitia iure dolor nobis eum perspiciatis, rem quis, porro culpa
+                                        omnis
                                         officiis ipsum. Porro illum repudiandae magnam at sapiente.
                                         Vero incidunt porro possimus repellat reprehenderit dolorum? Consectetur
-                                        reprehenderit delectus cupiditate perferendis! Dolorum nam reprehenderit ducimus
+                                        reprehenderit delectus cupiditate perferendis! Dolorum nam reprehenderit
+                                        ducimus
                                         velit quia quaerat maxime quo provident quidem! Aut quidem recusandae atque
                                         accusamus unde eaque?
-                                        Aliquid velit hic, nesciunt labore nemo cum nostrum amet voluptas ea sit omnis
-                                        deserunt? Porro, possimus veritatis quam ipsam ullam, magnam cupiditate tempora
+                                        Aliquid velit hic, nesciunt labore nemo cum nostrum amet voluptas ea sit
+                                        omnis
+                                        deserunt? Porro, possimus veritatis quam ipsam ullam, magnam cupiditate
+                                        tempora
                                         quisquam ratione deserunt aperiam et fuga nisi.</p>
                                 </div>
                             </li>
@@ -164,21 +204,29 @@
                                     </a>
                                 </div>
                                 <div class="derecha">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, commodi ut.
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, commodi
+                                        ut.
                                         Quod aperiam, enim voluptatibus sed, natus excepturi reiciendis doloribus
                                         repudiandae obcaecati error impedit quaerat. Nostrum hic velit iusto modi.
-                                        Quo, corporis? Quo quia quae impedit suscipit, doloribus vero veniam alias ea
-                                        maxime quibusdam nemo voluptas magni earum facilis itaque mollitia, asperiores
+                                        Quo, corporis? Quo quia quae impedit suscipit, doloribus vero veniam alias
+                                        ea
+                                        maxime quibusdam nemo voluptas magni earum facilis itaque mollitia,
+                                        asperiores
                                         voluptatum est corrupti deleniti atque consequatur id? Rem.
-                                        Aliquid itaque harum ut veritatis cumque asperiores veniam molestiae suscipit
-                                        facere mollitia iure dolor nobis eum perspiciatis, rem quis, porro culpa omnis
+                                        Aliquid itaque harum ut veritatis cumque asperiores veniam molestiae
+                                        suscipit
+                                        facere mollitia iure dolor nobis eum perspiciatis, rem quis, porro culpa
+                                        omnis
                                         officiis ipsum. Porro illum repudiandae magnam at sapiente.
                                         Vero incidunt porro possimus repellat reprehenderit dolorum? Consectetur
-                                        reprehenderit delectus cupiditate perferendis! Dolorum nam reprehenderit ducimus
+                                        reprehenderit delectus cupiditate perferendis! Dolorum nam reprehenderit
+                                        ducimus
                                         velit quia quaerat maxime quo provident quidem! Aut quidem recusandae atque
                                         accusamus unde eaque?
-                                        Aliquid velit hic, nesciunt labore nemo cum nostrum amet voluptas ea sit omnis
-                                        deserunt? Porro, possimus veritatis quam ipsam ullam, magnam cupiditate tempora
+                                        Aliquid velit hic, nesciunt labore nemo cum nostrum amet voluptas ea sit
+                                        omnis
+                                        deserunt? Porro, possimus veritatis quam ipsam ullam, magnam cupiditate
+                                        tempora
                                         quisquam ratione deserunt aperiam et fuga nisi.</p>
                                 </div>
                             </li>
@@ -191,21 +239,29 @@
                                     </a>
                                 </div>
                                 <div class="derecha">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, commodi ut.
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, commodi
+                                        ut.
                                         Quod aperiam, enim voluptatibus sed, natus excepturi reiciendis doloribus
                                         repudiandae obcaecati error impedit quaerat. Nostrum hic velit iusto modi.
-                                        Quo, corporis? Quo quia quae impedit suscipit, doloribus vero veniam alias ea
-                                        maxime quibusdam nemo voluptas magni earum facilis itaque mollitia, asperiores
+                                        Quo, corporis? Quo quia quae impedit suscipit, doloribus vero veniam alias
+                                        ea
+                                        maxime quibusdam nemo voluptas magni earum facilis itaque mollitia,
+                                        asperiores
                                         voluptatum est corrupti deleniti atque consequatur id? Rem.
-                                        Aliquid itaque harum ut veritatis cumque asperiores veniam molestiae suscipit
-                                        facere mollitia iure dolor nobis eum perspiciatis, rem quis, porro culpa omnis
+                                        Aliquid itaque harum ut veritatis cumque asperiores veniam molestiae
+                                        suscipit
+                                        facere mollitia iure dolor nobis eum perspiciatis, rem quis, porro culpa
+                                        omnis
                                         officiis ipsum. Porro illum repudiandae magnam at sapiente.
                                         Vero incidunt porro possimus repellat reprehenderit dolorum? Consectetur
-                                        reprehenderit delectus cupiditate perferendis! Dolorum nam reprehenderit ducimus
+                                        reprehenderit delectus cupiditate perferendis! Dolorum nam reprehenderit
+                                        ducimus
                                         velit quia quaerat maxime quo provident quidem! Aut quidem recusandae atque
                                         accusamus unde eaque?
-                                        Aliquid velit hic, nesciunt labore nemo cum nostrum amet voluptas ea sit omnis
-                                        deserunt? Porro, possimus veritatis quam ipsam ullam, magnam cupiditate tempora
+                                        Aliquid velit hic, nesciunt labore nemo cum nostrum amet voluptas ea sit
+                                        omnis
+                                        deserunt? Porro, possimus veritatis quam ipsam ullam, magnam cupiditate
+                                        tempora
                                         quisquam ratione deserunt aperiam et fuga nisi.</p>
                                 </div>
                             </li>
@@ -215,14 +271,14 @@
             </article>
         </section>
     </main>
+    
+    <footer class="grid-container-footer">
 
-    <footer class="grid_container_footer">
-
-        <ul class="social_networks_list">
+        <ul class="social-networks-list">
             <li>
                 <a href="https://www.linkedin.com/in/atilio-rausch-02a549167/" target="_blank">
-                    <svg class="imgSmall" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <svg class="widthAndHeightMax imgSmall" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
                         <path
                             d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
                     </svg>
@@ -230,8 +286,8 @@
             </li>
             <li>
                 <a href="https://twitter.com/home" target="_blank">
-                    <svg class="imgSmall" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-twitter" viewBox="0 0 16 16">
+                    <svg class="widthAndHeightMax imgSmall" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
                         <path
                             d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
                     </svg>
@@ -240,8 +296,8 @@
             <li>
                 <a href="https://mail.google.com/mail/u/0/#inbox?compose=DXDwSWwwrzrQjZmbzxrQNrwMbtTVLrkWnZhxSNvnhGhRsMlzgznkFFdTBmfVjrlMNnLvCMzTMbjSgHBNCHXbbtZCFBFPQpqDSRXPMCCqWWnBdRHVqwQrgpPg"
                     target="_blank">
-                    <svg class="imgSmall" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                    <svg class="widthAndHeightMax imgSmall" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
                         <path
                             d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z" />
                         <path
@@ -251,8 +307,8 @@
             </li>
             <li>
                 <a href="https://github.com/AtilioRausch" target="_blank">
-                    <svg class="imgSmall" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-github" viewBox="0 0 16 16">
+                    <svg class="widthAndHeightMax imgSmall" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                         <path
                             d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                     </svg>
@@ -260,8 +316,8 @@
             </li>
             <li>
                 <a href="https://api.whatsapp.com/send?phone=3447467728" target="_blank">
-                    <svg class="imgSmall" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <svg class="widthAndHeightMax imgSmall" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                         <path
                             d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
                     </svg>
@@ -269,11 +325,11 @@
             </li>
         </ul>
 
-        <a class="logo_brioplants widthAndHeightMax" href="#overview">
-            <img class="separationHorizontal" src="./images/logo_footer.png" alt="Logo de BrioPlants">
+        <a class="logo-brioplants" href="#overview">
+            <img class="logo-brioplants" src="./images/logo-footer.png" alt="Logo de BrioPlants">
         </a>
 
-        <ul class="list_footer_container">
+        <ul class="list-footer-container">
             <li>
                 <p><strong>Core data</strong></p>
                 <ul>
@@ -321,45 +377,48 @@
                         <a href="#">Tutorials</a>
                     </li>
                     <li>
-                        <a href="#about_us">About us</a>
+                        <a href="#about-us">About us</a>
                     </li>
                 </ul>
             </li>
         </ul>
 
-        <div class="list_institutions">
-            <ul class="widthAndHeightMax list_institutions_left">
-                <li>
-                    <a href="https://ial.conicet.gov.ar" target="_blank">
-                        <img class="logoMedium" src="./images/logoIAL.png" alt="Logo del IAL">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.bgi.com/global" target="_blank">
-                        <img class="logoMedium" src="./images/logo_BGI.png" alt="Logo de BGI">
-                    </a>
-                </li>
-            </ul>
-            <ul class="widthAndHeightMax list_institutions_right">
-                <li>
-                    <a href="http://ingenieria.uner.edu.ar/" target="_blank">
-                        <img class="logoMedium" src="./images/logoUNER.png" alt="Logo de UNER">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.coderhouse.com/" target="_blank">
-                        <img class="logoMedium" src="./images/logoCoderhouse.png" alt="Logo de Coderhouse">
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <ul class="list-institutions row">
+            <li class="col-6 col-sm-6 col-md-3  d-inline-flex justify-content-center align-items-center">
+                <a href="https://ial.conicet.gov.ar" target="_blank">
+                    <img class="logoMedium" src="./images/logoIAL.png" alt="Logo del IAL">
+                </a>
+            </li>
+            <li class="col-6 col-sm-6 col-md-3 d-inline-flex justify-content-center align-items-center">
+                <a href="https://www.bgi.com/global" target="_blank">
+                    <img class="logoMedium" src="./images/logo-BGI.png" alt="Logo de BGI">
+                </a>
+            </li>
+            <li class="col-6 col-sm-6 col-md-3 d-inline-flex justify-content-center align-items-center">
+                <a href="http://ingenieria.uner.edu.ar/" target="_blank">
+                    <img class="logoMedium" src="./images/logoUNER.png" alt="Logo de UNER">
+                </a>
+            </li>
+            <li class="col-6 col-sm-6 col-md-3 d-inline-flex justify-content-center align-items-center">
+                <a href="https://www.coderhouse.com/" target="_blank">
+                    <img class="logoMedium" src="./images/logoCoderhouse.png" alt="Logo de Coderhouse">
+                </a>
+            </li>
+        </ul>
 
         <div class="copyright">
-            <p><strong>Copyright© 2023 BrioPlants.</strong> All trademarks are the property of Brioplants, or their respective
+            <p><strong>Copyright© 2023 BrioPlants.</strong> All trademarks are the property of Brioplants, or their
+                respective
                 owners</p>
         </div>
     </footer>
 
+        <!--JS script-->
+        <script src="./scripts/list-group-floating-bar.js"></script>
+        <!--Boostrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
