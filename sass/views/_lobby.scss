@@ -1,0 +1,72 @@
+/* ------------------Lobby------------------*/
+
+/* Estilo del lobby*/
+#lobby {
+    width: 100%;
+    height: 46rem;
+    background-image: url("../images/lobby-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#lobby article {
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+
+/* Estilo de h2*/
+#lobby article div h2 {
+    text-align: center;
+    color: #ccc5b9;
+}
+
+/* Estilo de lista vertical con scroll*/
+.listaVertical {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+/* Posición de div que contiene lista vertical*/
+#lobby article div.playlists {
+    position: absolute;
+    top: 15rem;
+    left: 7%;
+    width: 22rem;
+    height: 20rem;
+}
+
+/* Posición de div que contiene información*/
+#lobby article div.data {
+    position: absolute;
+    top: 3rem;
+    left: 35%;
+    color: #ccc5b9;
+    text-align: center;
+    width: 30%;
+}
+
+/* Posición de boton con referencia al home*/
+#lobby article div.data div button {
+    position: absolute;
+    top: 31rem;
+    left: 11.5rem;
+    width: 6rem;
+    height: 2rem;
+}
+
+/* Posición de div que contiene lista vertical*/
+#lobby article div.songs {
+    position: absolute;
+    top: 15rem;
+    left: 70%;
+    width: 22rem;
+    height: 20rem;
+}
+
+/* Estilo de elementos de la lista ajustado al contenido*/
+#lobby article div ul li {
+    width: fit-content;
+    height: fit-content;
+}

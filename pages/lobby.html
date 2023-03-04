@@ -27,7 +27,7 @@
     <header>
         <nav class="widthAndHeightMax grid-container-navBar">
             <a class="link-logo-nav" href="../index.html">
-                <img class="logoWide" src="../images/logo-navbar.png" alt="Logo de grupo - BrioPlants">
+                <img class="logoWide" src="../images/logo-navbar.png" alt="Logo de grupo - BrioPlants" />
             </a>
             <ul class="large-screen-options widthAndHeightMax">
                 <li><a href="./softwares.html">Softwares</a></li>
@@ -39,21 +39,69 @@
             <div class="medium-screen-options dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    Utilities
+                    Fast access
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="./softwares.html">Softwares</a></li>
-                    <li><a class="dropdown-item" href="./databases.html">Databases</a></li>
-                    <li><a class="dropdown-item" href="./lobby.html">Lobby</a></li>
-                    <li><a class="dropdown-item" href="./contact.html">Contact</a></li>
+                    <li>
+                        <a class="dropdown-item" href="./softwares.html">Softwares</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="./databases.html">Databases</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="./lobby.html">Lobby</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="./contact.html">Contact</a>
+                    </li>
                 </ul>
             </div>
 
-            <svg class="widthAndHeightMax imgSmall" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-            </svg>
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight">
+                <svg class="widthAndHeightMax imgSmall" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header d-flex justify-content-between align-content-center">
+                    <h3 class="offcanvas-title" id="offcanvasRightLabel">Options</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+                        <svg class="widthAndHeightMax imgSmall" xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path class="widthAndHeightMax"
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="offcanvas-body offcanvas-body-medium-large">
+                    <ul class="list-group list-side-bar">
+                        <li class="list-group-item"><a href="#">News</a></li>
+                        <li class="list-group-item"><a href="#">Community</a></li>
+                        <li class="list-group-item"><a href="#">Resources</a></li>
+                        <li class="list-group-item"><a href="#">Tutorials</a></li>
+                        <li class="list-group-item"><a href="#">Contributors</a></li>
+                    </ul>
+                </div>
+                <div class="offcanvas-body offcanvas-body-small">
+                    <ul class="list-group list-side-bar">
+                        <li class="list-group-item"><a href="./softwares.html">Softwares</a></li>
+                        <li class="list-group-item"><a href="./databases.html">Databases</a></li>
+                        <li class="list-group-item"><a href="./lobby.html">Lobby</a></li>
+                        <li class="list-group-item"><a href="./contact.html">Contact</a></li>
+                        <li class="list-group-item"><a href="#">News</a></li>
+                        <li class="list-group-item"><a href="#">Community</a></li>
+                        <li class="list-group-item"><a href="#">Resources</a></li>
+                        <li class="list-group-item"><a href="#">Tutorials</a></li>
+                        <li class="list-group-item"><a href="#">Contributors</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </nav>
     </header>
 

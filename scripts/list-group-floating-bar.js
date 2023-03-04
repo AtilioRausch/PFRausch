@@ -1,4 +1,4 @@
-const items = document.querySelectorAll(".list-group-item");
+const items = document.querySelectorAll(".float-bar .list-group-item");
 const sections = document.querySelectorAll(".section");
 
 function highlightNav() {

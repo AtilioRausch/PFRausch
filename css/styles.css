@@ -1,810 +1,836 @@
+@charset "UTF-8";
 /* Reset CSS, margin y padding, porque valor
  por defecto varía entre navegadores */
 /*
 *  html5resetcss
 */
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
 body {
-    line-height: 1
+  line-height: 1;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
 nav ul {
-    list-style: none
+  list-style: none;
 }
 
-blockquote,
-q {
-    quotes: none
+blockquote, q {
+  quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: none
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
 }
 
 a {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
 ins {
-    background-color: #ff9;
-    color: #000;
-    text-decoration: none
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
 }
 
 mark {
-    background-color: #ff9;
-    color: #000;
-    font-style: italic;
-    font-weight: bold
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
 }
 
 del {
-    text-decoration: line-through
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
 }
 
 abbr[title],
 dfn[title] {
-    border-bottom: 1px dotted;
-    cursor: help
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 input,
 select {
-    vertical-align: middle
-}
-
-
-/* Estilos generales y fuentes */
-a {
-    color: #252422;
-    text-decoration: none;
-}
-
-h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
-}
-
-h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.75rem;
-}
-
-h3 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-}
-
-p {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: medium;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 90%;
-}
-
-iframe {
-    width: 20rem;
-    height: 10rem;
-}
-
-.separationVertical {
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-
-.separationHorizontal {
-    padding-left: 2%;
-    padding-right: 2%;
-}
-
-.imgSmall {
-    min-width: 1.5rem;
-    min-height: 1.5rem;
-    max-width: 2.5rem;
-    max-height: 2.5rem;
-}
-
-.logoWide {
-    width: 80%;
-    height: 40%;
-    min-width: 6rem;
-    min-height: 1rem;
-    max-width: 12rem;
-    max-height: 4rem;
-}
-
-.logoMedium {
-    width: 8rem;
-    height: 3.5rem;
-}
-
-.widthAndHeightMax {
-    width: 100%;
-    height: 100%;
-}
-.fullScreen{
-    height: 100vh;
-    width: 100%;
-}
-.row {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
+  vertical-align: middle;
 }
 
 /* ------------------Estilo del header y nav------------------*/
-
 header {
-    position: sticky;
-    top: 0%;
-    left: 0%;
-    margin-top: -4rem;
-    width: 100%;
-    height: 4rem;
-
-    background-color: #252422;
-    z-index: 20;
+  position: sticky;
+  top: 0%;
+  left: 0%;
+  margin-top: -4rem;
+  width: 100%;
+  height: 4rem;
+  background-color: #252422;
+  z-index: 50;
 }
 
 .medium-screen-options {
-    display: none;
+  display: none;
 }
 
 .grid-container-navBar {
-    display: grid;
-    grid-template-areas: ".link-logo-nav .large-screen-options button";
-    grid-template-columns: 25% 50% 25%;
-    justify-items: center;
-    align-items: center;
+  display: grid;
+  grid-template-areas: ".link-logo-nav .large-screen-options button";
+  grid-template-columns: 25% 50% 25%;
+  justify-items: center;
+  align-items: center;
 }
 
 .link-logo-nav {
-    justify-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body header nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 5%;
 }
 
-body header nav button{
-    background-color: transparent;
-    justify-self: end;
-    height: 100%;
+body header nav button {
+  background-color: transparent;
+  justify-self: end;
+  height: 100%;
 }
+
 body header nav svg {
-    color: #eb5e28;
+  color: #eb5e28;
 }
+
 /* Estilo de los enlaces*/
 body header nav ul li a {
-    color: #ccc5b9;
-    font-size: 130%;
+  color: #ccc5b9;
+  font-size: 130%;
 }
 
 body header nav ul li a:hover {
-    background-color: #eb5e28;
+  background-color: #eb5e28;
 }
 
+.offcanvas {
+  color: #ccc5b9;
+  background-color: #252422;
+}
 
-.offcanvas{
-    color: #ccc5b9;
-    background-color: #252422;
+.offcanvas-body-small {
+  display: none;
 }
-.offcanvas-body-small{
-    display: none;
+
+.btn-close {
+  height: 80%;
+  width: 10%;
+  --bs-btn-close-bg: none;
+  --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(235, 94, 40, 0.25);
 }
-.btn-close{
-    height: 80%;
-    width: 10%;
-    --bs-btn-close-bg: none;
-    --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(235, 94, 40, 0.25);
+
+.btn-close svg {
+  color: #eb5e28;
 }
-.btn-close svg{
-    color: #eb5e28;
+
+.list-side-bar {
+  text-align: center;
 }
-.list-side-bar{
-    text-align: center;
+
+.list-side-bar li {
+  font-size: 1rem;
+  width: 100%;
+  border: none;
+  margin-top: 2rem;
+  color: #ccc5b9;
+  --bs-list-group-border-radius: none;
+  --bs-list-group-border-width: none;
+  --bs-list-group-bg: #252422;
+  border-radius: none;
 }
-.list-side-bar li{
-    font-size: 1rem;
-    width: 100%;
-    border: none;
-    margin-top: 2rem;
-    color: #ccc5b9;
-    --bs-list-group-border-radius: none;
-    --bs-list-group-border-width: none;
-    --bs-list-group-bg: #252422;
-    border-radius: none;
+
+.list-side-bar li:hover {
+  background-color: #eb5e28;
 }
-.list-side-bar li:hover{
-    background-color: #eb5e28;
-}
+
 .list-group-item:first-child {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
+
 .list-group-item.active {
-    color: var(--bs-list-group-active-color);
-    background-color:#eb5e28;
-    border-color: transparent;
+  color: var(--bs-list-group-active-color);
+  background-color: #eb5e28;
+  border-color: transparent;
 }
 
-/* ------------------Parallax------------------*/
+@media (max-width: 768px) {
+  /* ------------------Estilo del header y nav------------------*/
+  .grid-container-navBar {
+    grid-template-areas: ".link-logo-nav .medium-screen-options svg";
+  }
+  .large-screen-options {
+    display: none;
+  }
+  .medium-screen-options {
+    display: block;
+  }
+  .btn {
+    background-color: transparent;
+    padding: 0%;
+    border: none;
+    color: #ccc5b9;
+    font-size: 130%;
+  }
+  .btn:hover {
+    background-color: #eb5e28;
+    border: none;
+  }
+  .dropdown-menu {
+    background-color: #252422;
+  }
+  .dropdown-item {
+    color: #ccc5b9;
+  }
+  .dropdown-item:active {
+    background-color: #eb5e28;
+  }
+}
+@media (max-width: 576px) {
+  /* ------------------Estilo del header y nav------------------*/
+  .grid-container-navBar {
+    grid-template-areas: ".link-logo-nav .medium-screen-options";
+    grid-template-columns: 50% 50%;
+  }
+  .medium-screen-options {
+    display: none;
+  }
+  .grid-container-navBar {
+    grid-template-areas: ".link-logo-nav svg";
+    grid-template-columns: 50% 50%;
+  }
+  .offcanvas-body-small {
+    display: block;
+  }
+  .offcanvas-body-medium-large {
+    display: none;
+  }
+}
+footer {
+  position: relative;
+  left: 0%;
+  top: 0%;
+  background-color: #ccc5b9;
+  z-index: 40;
+}
 
-/* Establezco un alto de fondo de 40rem con tres secciones para el index
-Utilizo fondos de color solido para optimizar el contraste.*/
-.parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.grid-container-footer {
+  height: 30rem;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "social social social" "brioplants list-data list-data" "institutions institutions institutions" "copyright copyright copyright";
+  grid-template-columns: 30% 40% auto;
+  grid-template-rows: 20% 50% auto 5%;
+}
+
+.social-networks-list {
+  grid-area: social;
+  background-color: #eb5e28;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo-brioplants {
+  grid-area: brioplants;
+  align-self: center;
+  justify-self: center;
+}
+
+.logo-brioplants img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.list-footer-container {
+  grid-area: list-data;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list-footer-container p {
+  font-size: 1.5rem;
+  border-bottom: #252422 solid 2px;
+  margin-bottom: 0.5rem;
+}
+
+.list-footer-container li {
+  padding-bottom: 0.2rem;
+}
+
+.list-footer-container li a {
+  font-size: 1rem;
+}
+
+.list-footer-container a:hover {
+  color: #eb5e28;
+  text-decoration: underline;
+}
+
+.list-institutions {
+  grid-area: institutions;
+  overflow: hidden;
+}
+
+.copyright {
+  grid-area: copyright;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  height: fit-content;
+}
+
+@media (max-width: 768px) {
+  /* ------------------Footer------------------*/
+  .grid-container-footer {
+    height: 35rem;
+    grid-template-areas: "social social social" "brioplants list-data list-data" "institutions institutions institutions" "copyright copyright copyright";
+    grid-template-columns: 30% 40% auto;
+    grid-template-rows: 20% 50% auto 7%;
+  }
+  .copyright p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  /* ------------------Footer------------------*/
+  .grid-container-footer {
     height: 40rem;
-    max-width: 100%;
-    position: relative;
+    grid-template-areas: "social" "list-data" "institutions" "brioplants" "copyright";
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 30% 17% auto 6%;
+  }
+  .logoMedium {
+    width: 6.2rem;
+    height: 3rem;
+  }
+  .logo-brioplants img {
+    width: 8rem;
+    height: 8rem;
+  }
+  .list-footer-container p {
+    font-size: 1rem;
+  }
+  .list-footer-container li a {
+    font-size: 0.8rem;
+  }
+  .copyright p {
+    font-size: 0.8rem;
+  }
+}
+/* ------------------Background------------------*/
+.background {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%;
+  position: relative;
 }
 
 .back-uno {
-    background-color: #ccc5b9;
+  background-color: #ccc5b9;
 }
 
 .back-dos {
-    background-color: #252422;
+  background-color: #252422;
 }
 
 .back-tres {
-    background-color: #403d39;
+  background-color: #403d39;
 }
 
 /* ------------------Secciones index------------------*/
-
-/* Barra de navegación de secciones del index flotante.
-Le establecí color de fondo azul para que se vea ya que 
-necesito darle cambios de color entre secciones y aun 
-no lo vimos*/
 .float-bar {
-    position: fixed;
-    left: 92%;
-    top: 60%;
-    z-index: 30;
+  position: fixed;
+  left: 90%;
+  top: 80%;
+  z-index: 30;
 }
-
 .float-bar li a {
-    color: #ccc5b9;
-    font-size: 1.3rem;
+  color: #eb5e28;
+  font-size: 1.3rem;
 }
 
-.float-bar-item.active {
-    color: #eb5e28;
+.float-bar .list-group-item.active {
+  background-color: #eb5e28;
+}
+.float-bar .list-group-item.active a {
+  color: #252422;
+}
+
+.list-group-item-action:focus, .list-group-item-action:hover {
+  color: #eb5e28;
+  background-color: inherit;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.list-group-item:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.float-bar .list-group-item {
+  background-color: transparent;
+  border-color: #eb5e28;
 }
 
 /* Tamaño y colores de texto de las secciones*/
 main section#overview {
-    padding-top: 4rem;
+  padding-top: 4rem;
 }
+
 main section#about-us {
-    padding-top: 4rem;
-    color: #ccc5b9;
+  padding-top: 4rem;
+  color: #ccc5b9;
 }
+
 main section#research {
-    padding-top: 4rem;
-    color: #ccc5b9;
+  padding-top: 4rem;
+  color: #ccc5b9;
 }
 
 /* -----------Seccion overview-----------*/
-/* main section#overview{
-    margin-top: 4rem;
-} */
-main section#overview article div img{
-    height: auto;
-    width: 100%;
-    object-fit: cover;
-} 
-
-/* A los div les centro el texto y les doy el maximo tamaño*/
-.divSectionMain {
-    text-align: center;
-    height: 100%;
-    width: 100%;
+main section#overview article div img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
 }
 
-/* Ubico imagen anexa de fondo (ADN dorado)*/
-.divImagenFondoIzquierda {
-    position: absolute;
-    top: 0%;
-    left: 0%;
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='orange'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
+  filter: none;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='orange'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background-color: #eb5e28;
 }
 
 /* -----------Seccion about-us-----------*/
+/* Ubico imagen anexa de fondo (ADN dorado)*/
+.divBackgroundImage {
+  position: absolute;
+  top: 4rem;
+  left: 0%;
+}
+
+main section#about-us article {
+  display: grid;
+  grid-template-areas: "presentation" "cards" "disciplines";
+  grid-template-rows: 25% 50% auto;
+}
+
+.divPresentation {
+  grid-area: presentation;
+  text-align: center;
+}
+.divPresentation h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.divPresentation div p {
+  width: 50%;
+}
+
+.divCards {
+  grid-area: cards;
+}
+.divCards img {
+  border-radius: 50%;
+}
+
+.divDisciplines {
+  grid-area: disciplines;
+  text-align: center;
+}
+.divDisciplines ul {
+  margin-top: 2rem;
+}
+.divDisciplines ul li {
+  background-color: #eb5e28;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 4rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.divDisciplines ul li a {
+  text-align: center;
+  color: #ccc5b9;
+  font-size: large;
+  height: fit-content;
+}
 
 /* z index mayor para que pise a la imagen de fondo anexa*/
-main section#about-us article div div.separation {
-    position: relative;
-    z-index: 10;
+main section#about-us article .divPresentation {
+  position: relative;
+  z-index: 10;
 }
 
-/* Tamaño y box modeling de las imágenes circulares*/
-main section#about-us article div div.separation img {
-    border-radius: 50%;
-    width: 15rem;
-    height: 15rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  margin-top: 2rem;
+  position: relative;
+  max-width: 100%;
+  min-width: 20%;
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 50%;
 }
 
-/* Posicion y tamaño de los p.
-z-index mayor para que pise imagen de fondo anexa*/
-main section#about-us article div p {
-    position: relative;
-    left: 25%;
-    width: 50%;
-    z-index: 10;
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-/* Estilo de lista de disciplinas*/
-main section#about-us article div div ul li {
-    display: inline-block;
-    background-color: #eb5e28;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    height: 4rem;
-    width: 8rem;
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
 }
 
-/* Estilo de enlaces de la lista de disciplinas*/
-main section#about-us article div div ul li a {
-    position: relative;
-    top: 30%;
-    color: #ccc5b9;
-    font-size: large;
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #eb5e28;
+  color: #ccc5b9;
+  transform: rotateY(180deg);
+}
+.flip-card-back h3 {
+  margin-top: 2rem;
+}
+.flip-card-back p {
+  width: 60%;
 }
 
 /* -----------Sección research-----------*/
-
 /* Estilo de lista con scroll vertical*/
 main section#research article div div ul {
-    position: relative;
-    left: 5%;
-    width: 90%;
-    height: 20rem;
-    overflow-y: scroll;
+  position: relative;
+  left: 5%;
+  width: 90%;
+  height: 20rem;
+  overflow-y: scroll;
 }
 
 /* Estilo de elementos de lista*/
 main section#research article div div ul li {
-    border: 4px groove #ccc5b9;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
+  border: 4px groove #ccc5b9;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
 }
 
 /* Elementos ubicados a la izquierda dentro de un elemento de lista*/
 .izquierda {
-    position: relative;
-    top: 0%;
-    left: 0%;
-    display: inline-block;
-    width: 20rem;
-    overflow: hidden;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  display: inline-block;
+  width: 20rem;
+  overflow: hidden;
 }
 
 /* Elementos ubicados a la derecha dentro de un elemento de lista*/
 .derecha {
-    position: relative;
-    top: 0%;
-    left: 1%;
-    display: inline-block;
-    width: 55%;
+  position: relative;
+  top: 0%;
+  left: 1%;
+  display: inline-block;
+  width: 55%;
 }
 
 /* Tamaño de imagenes dentro de la lista*/
 main section#research article div div ul li a img {
-    width: 15rem;
-    height: 15rem;
+  width: 15rem;
+  height: 15rem;
 }
 
 /* Configuración del texto dentro de la lista*/
 main section#research article div div ul li p {
-    text-align: justify;
+  text-align: justify;
 }
 
-/* ------------------Footer------------------*/
-footer {
-    position: relative;
-    left: 0%;
-    top: 0%;
-    background-color: #ccc5b9;
-    z-index: 40;
+@media (max-width: 768px) {
+  /* ------------------Main Index------------------*/
+  main section#overview article div img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
 }
-
-.grid-container-footer {
-    height: 30rem;
-    width: 100%;
-    display: grid;
-    grid-template-areas:
-        'social social social'
-        'brioplants list-data list-data'
-        'institutions institutions institutions'
-        'copyright copyright copyright';
-    grid-template-columns: 30% 40% auto;
-    grid-template-rows: 20% 50% auto 5%;
-}
-
-.social-networks-list {
-    grid-area: social;
-    background-color: #eb5e28;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.logo-brioplants {
-    grid-area: brioplants;
-    align-self: center;
-    justify-self: center;
-}
-
-.logo-brioplants img {
-    width: 10rem;
-    height: 10rem;
-
-}
-
-.list-footer-container {
-    grid-area: list-data;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.list-footer-container p {
-    font-size: 1.5rem;
-    border-bottom: #252422 solid 2px;
-    margin-bottom: 0.5rem;
-}
-
-.list-footer-container li {
-    padding-bottom: 0.2rem;
-}
-
-.list-footer-container li a {
-    font-size: 1rem;
-}
-
-.list-footer-container a:hover {
-    color: #eb5e28;
-    text-decoration: underline;
-}
-
-.list-institutions {
-    grid-area: institutions;
-    overflow: hidden;
-}
-
-.copyright {
-    grid-area: copyright;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-    height: fit-content;
-}
-
 /* ------------------Lobby------------------*/
-
 /* Estilo del lobby*/
 #lobby {
-    width: 100%;
-    height: 46rem;
-    background-image: url("../images/lobby-background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+  width: 100%;
+  height: 46rem;
+  background-image: url("../images/lobby-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #lobby article {
-    position: relative;
-    top: 0%;
-    left: 0%;
+  position: relative;
+  top: 0%;
+  left: 0%;
 }
 
 /* Estilo de h2*/
 #lobby article div h2 {
-    text-align: center;
-    color: #ccc5b9;
+  text-align: center;
+  color: #ccc5b9;
 }
 
 /* Estilo de lista vertical con scroll*/
 .listaVertical {
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 /* Posición de div que contiene lista vertical*/
 #lobby article div.playlists {
-    position: absolute;
-    top: 15rem;
-    left: 7%;
-    width: 22rem;
-    height: 20rem;
+  position: absolute;
+  top: 15rem;
+  left: 7%;
+  width: 22rem;
+  height: 20rem;
 }
 
 /* Posición de div que contiene información*/
 #lobby article div.data {
-    position: absolute;
-    top: 3rem;
-    left: 35%;
-    color: #ccc5b9;
-    text-align: center;
-    width: 30%;
+  position: absolute;
+  top: 3rem;
+  left: 35%;
+  color: #ccc5b9;
+  text-align: center;
+  width: 30%;
 }
 
 /* Posición de boton con referencia al home*/
 #lobby article div.data div button {
-    position: absolute;
-    top: 31rem;
-    left: 11.5rem;
-    width: 6rem;
-    height: 2rem;
+  position: absolute;
+  top: 31rem;
+  left: 11.5rem;
+  width: 6rem;
+  height: 2rem;
 }
 
 /* Posición de div que contiene lista vertical*/
 #lobby article div.songs {
-    position: absolute;
-    top: 15rem;
-    left: 70%;
-    width: 22rem;
-    height: 20rem;
+  position: absolute;
+  top: 15rem;
+  left: 70%;
+  width: 22rem;
+  height: 20rem;
 }
 
 /* Estilo de elementos de la lista ajustado al contenido*/
 #lobby article div ul li {
-    width: fit-content;
-    height: fit-content;
+  width: fit-content;
+  height: fit-content;
 }
 
-
-@media (max-width: 768px) {
-
-    /* ------------------Estilo del header y nav------------------*/
-    .grid-container-navBar {
-        grid-template-areas: ".link-logo-nav .medium-screen-options svg";
-    }
-
-    .large-screen-options {
-        display: none;
-    }
-
-    .medium-screen-options {
-        display: block;
-    }
-
-    .btn {
-        background-color: transparent;
-        padding: 0%;
-        border: none;
-        color: #ccc5b9;
-        font-size: 130%;
-    }
-
-    .btn:hover {
-        background-color: #eb5e28;
-        border: none;
-    }
-
-    .dropdown-menu {
-        background-color: #252422;
-    }
-
-    .dropdown-item {
-        color: #ccc5b9;
-    }
-
-    .dropdown-item:active {
-        background-color: #eb5e28;
-    }
-    /* ------------------Main Index------------------*/
-
-    main section#overview article div img{
-        height: 100%;
-        width: auto;
-        object-fit: cover;
-    } 
-    
-    /* ------------------Footer------------------*/
-    .grid-container-footer {
-        height: 35rem;
-        grid-template-areas:
-            'social social social'
-            'brioplants list-data list-data'
-            'institutions institutions institutions'
-            'copyright copyright copyright';
-        grid-template-columns: 30% 40% auto;
-        grid-template-rows: 20% 50% auto 7%;
-    }
-
-    .copyright p {
-        font-size: 1rem;
-    }
+/* Estilos generales y fuentes */
+a {
+  color: #252422;
+  text-decoration: none;
 }
 
-@media (max-width: 576px) {
-
-    /* ------------------Estilo del header y nav------------------*/
-    .grid-container-navBar {
-        grid-template-areas: ".link-logo-nav .medium-screen-options";
-        grid-template-columns: 50% 50%;
-    }
-
-    .medium-screen-options {
-        display: none;
-    }
-
-    .grid-container-navBar {
-        grid-template-areas: ".link-logo-nav svg";
-        grid-template-columns: 50% 50%;
-    }
-    .offcanvas-body-small{
-        display: block;
-    }
-    .offcanvas-body-medium-large{
-        display: none;
-    }
-    /* ------------------Footer------------------*/
-    .grid-container-footer {
-        height: 40rem;
-        grid-template-areas:
-            'social'
-            'list-data'
-            'institutions'
-            'brioplants'
-            'copyright';
-        grid-template-columns: 100%;
-        grid-template-rows: 20% 30% 15% auto 6%;
-    }
-
-    .logoMedium {
-        width: 6.2rem;
-        height: 3rem;
-    }
-
-    .logo-brioplants img {
-        width: 8rem;
-        height: 8rem;
-    }
-
-    .list-footer-container p {
-        font-size: 1rem;
-    }
-
-    .list-footer-container li a {
-        font-size: 0.8rem;
-    }
-
-    .copyright p {
-        font-size: 0.8rem;
-    }
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
 }
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: medium;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 90%;
+}
+
+iframe {
+  width: 20rem;
+  height: 10rem;
+}
+
+.separationVertical {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.separationHorizontal {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.imgSmall {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+}
+
+.logoWide {
+  width: 80%;
+  height: 40%;
+  min-width: 6rem;
+  min-height: 1rem;
+  max-width: 12rem;
+  max-height: 4rem;
+}
+
+.logoMedium {
+  width: 8rem;
+  height: 3.5rem;
+}
+
+.widthAndHeightMax {
+  width: 100%;
+  height: 100%;
+}
+
+.fullScreen {
+  height: 100vh;
+  width: 100%;
+}
+
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
