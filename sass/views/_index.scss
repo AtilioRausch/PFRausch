@@ -66,6 +66,7 @@
 
 /* Tamaño y colores de texto de las secciones*/
 main{
+    min-width: 345px;
     section#overview {
         padding-top: 4rem;
     }
@@ -74,7 +75,7 @@ main{
         color: #ccc5b9;
         min-height: 55rem;
         @include mobile{
-            min-height: 100rem;
+            min-height: 90rem;
         }
     }
     section#research {

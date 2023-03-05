@@ -140,6 +140,7 @@ header {
   margin-top: -4rem;
   width: 100%;
   height: 4rem;
+  min-width: 345px;
   background-color: #252422;
   z-index: 50;
 }
@@ -311,6 +312,7 @@ footer {
   top: 0%;
   background-color: #ccc5b9;
   z-index: 40;
+  min-width: 345px;
 }
 
 .grid-container-footer {
@@ -484,6 +486,9 @@ footer {
 }
 
 /* Tamaño y colores de texto de las secciones*/
+main {
+  min-width: 345px;
+}
 main section#overview {
   padding-top: 4rem;
 }
@@ -494,7 +499,7 @@ main section#about-us {
 }
 @media screen and (max-width: 576px) {
   main section#about-us {
-    min-height: 100rem;
+    min-height: 90rem;
   }
 }
 main section#research {
