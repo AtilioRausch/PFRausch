@@ -140,7 +140,7 @@ header {
   margin-top: -4rem;
   width: 100%;
   height: 4rem;
-  min-width: 345px;
+  min-width: 397px;
   background-color: #252422;
   z-index: 50;
 }
@@ -312,7 +312,7 @@ footer {
   top: 0%;
   background-color: #ccc5b9;
   z-index: 40;
-  min-width: 345px;
+  min-width: 397px;
 }
 
 .grid-container-footer {
@@ -487,7 +487,7 @@ footer {
 
 /* Tamaño y colores de texto de las secciones*/
 main {
-  min-width: 345px;
+  min-width: 397px;
 }
 main section#overview {
   padding-top: 4rem;
@@ -505,6 +505,7 @@ main section#about-us {
 main section#research {
   padding-top: 4rem;
   color: #ccc5b9;
+  min-height: 55rem;
 }
 
 /* -----------Seccion overview-----------*/
@@ -711,15 +712,20 @@ main section#research article div p {
   background-color: #403d39;
 }
 main section#research article .divListResearch {
-  height: 100%;
+  height: 65%;
   display: flex;
   justify-content: center;
   align-content: center;
 }
 main section#research article .divListResearch ul {
   width: 90%;
-  height: 70%;
+  height: auto;
   overflow-y: scroll;
+}
+@media screen and (max-width: 576px) {
+  main section#research article .divListResearch ul {
+    margin-bottom: 6.5rem;
+  }
 }
 main section#research article .divListResearch ul li {
   display: flex;
