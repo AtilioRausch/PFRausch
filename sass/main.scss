@@ -1,8 +1,10 @@
+@import 'utilities/mixins';
 @import 'base/reset';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'views/index';
 @import 'views/lobby';
+
 
 
 /* Estilos generales y fuentes */
@@ -74,6 +76,10 @@ iframe {
 .logoMedium {
     width: 8rem;
     height: 3.5rem;
+    @include mobile{
+        width: 6.2rem;
+        height: 3rem;
+    }
 }
 
 .widthAndHeightMax {

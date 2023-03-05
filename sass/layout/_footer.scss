@@ -18,6 +18,27 @@ footer {
         'copyright copyright copyright';
     grid-template-columns: 30% 40% auto;
     grid-template-rows: 20% 50% auto 5%;
+    @include tablet{
+        height: 35rem;
+        grid-template-areas:
+            'social social social'
+            'brioplants list-data list-data'
+            'institutions institutions institutions'
+            'copyright copyright copyright';
+        grid-template-columns: 30% 40% auto;
+        grid-template-rows: 20% 50% auto 7%;
+    }
+    @include mobile{
+        height: 40rem;
+        grid-template-areas:
+            'social'
+            'list-data'
+            'institutions'
+            'brioplants'
+            'copyright';
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 30% 17% auto 6%;
+    }
 }
 
 .social-networks-list {
@@ -33,12 +54,14 @@ footer {
     grid-area: brioplants;
     align-self: center;
     justify-self: center;
-}
-
-.logo-brioplants img {
-    width: 10rem;
-    height: 10rem;
-
+    img {
+        width: 10rem;
+        height: 10rem;
+        @include mobile{
+            width: 8rem;
+            height: 8rem;
+        }
+    }
 }
 
 .list-footer-container {
@@ -47,25 +70,27 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-}
-
-.list-footer-container p {
-    font-size: 1.5rem;
-    border-bottom: #252422 solid 2px;
-    margin-bottom: 0.5rem;
-}
-
-.list-footer-container li {
-    padding-bottom: 0.2rem;
-}
-
-.list-footer-container li a {
-    font-size: 1rem;
-}
-
-.list-footer-container a:hover {
-    color: #eb5e28;
-    text-decoration: underline;
+    p{
+        font-size: 1.5rem;
+        border-bottom: #252422 solid 2px;
+        margin-bottom: 0.5rem;
+        @include mobile{
+            font-size: 1rem;
+        }
+    }
+    li {
+        padding-bottom: 0.2rem;
+        a {
+            font-size: 1rem;
+            @include mobile{
+                font-size: 0.8rem;
+            }
+            &:hover {
+                color: #eb5e28;
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 .list-institutions {
@@ -78,63 +103,12 @@ footer {
     margin-left: 1rem;
     margin-bottom: 1rem;
     height: fit-content;
-}
-
-
-
-@media (max-width: 768px) {
-
-    /* ------------------Footer------------------*/
-    .grid-container-footer {
-        height: 35rem;
-        grid-template-areas:
-            'social social social'
-            'brioplants list-data list-data'
-            'institutions institutions institutions'
-            'copyright copyright copyright';
-        grid-template-columns: 30% 40% auto;
-        grid-template-rows: 20% 50% auto 7%;
-    }
-
-    .copyright p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 576px) {
-
-    /* ------------------Footer------------------*/
-    .grid-container-footer {
-        height: 40rem;
-        grid-template-areas:
-            'social'
-            'list-data'
-            'institutions'
-            'brioplants'
-            'copyright';
-        grid-template-columns: 100%;
-        grid-template-rows: 20% 30% 17% auto 6%;
-    }
-
-    .logoMedium {
-        width: 6.2rem;
-        height: 3rem;
-    }
-
-    .logo-brioplants img {
-        width: 8rem;
-        height: 8rem;
-    }
-
-    .list-footer-container p {
-        font-size: 1rem;
-    }
-
-    .list-footer-container li a {
-        font-size: 0.8rem;
-    }
-
-    .copyright p {
-        font-size: 0.8rem;
+    p{
+        @include tablet{
+            font-size: 1rem;
+        }
+        @include mobile{
+            font-size: 0.8rem;
+        }
     }
 }

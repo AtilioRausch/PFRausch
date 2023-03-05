@@ -144,8 +144,24 @@ header {
   z-index: 50;
 }
 
+@media screen and (max-width: 768px) {
+  .large-screen-options {
+    display: none;
+  }
+}
+
 .medium-screen-options {
   display: none;
+}
+@media screen and (max-width: 768px) {
+  .medium-screen-options {
+    display: block;
+  }
+}
+@media screen and (max-width: 576px) {
+  .medium-screen-options {
+    display: none;
+  }
 }
 
 .grid-container-navBar {
@@ -154,6 +170,34 @@ header {
   grid-template-columns: 25% 50% 25%;
   justify-items: center;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .grid-container-navBar {
+    grid-template-areas: ".link-logo-nav .medium-screen-options svg";
+  }
+}
+@media screen and (max-width: 576px) {
+  .grid-container-navBar {
+    grid-template-areas: ".link-logo-nav .medium-screen-options";
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown-menu {
+    background-color: #252422;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown-item {
+    color: #ccc5b9;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dropdown-item:active {
+    background-color: #eb5e28;
+  }
 }
 
 .link-logo-nav {
@@ -171,34 +215,55 @@ body header nav ul {
   flex-wrap: wrap;
   column-gap: 5%;
 }
-
+body header nav ul li a {
+  color: #ccc5b9;
+  font-size: 130%;
+}
+body header nav ul li a:hover {
+  background-color: #eb5e28;
+}
 body header nav button {
   background-color: transparent;
   justify-self: end;
   height: 100%;
 }
-
 body header nav svg {
   color: #eb5e28;
 }
 
 /* Estilo de los enlaces*/
-body header nav ul li a {
-  color: #ccc5b9;
-  font-size: 130%;
-}
-
-body header nav ul li a:hover {
-  background-color: #eb5e28;
-}
-
 .offcanvas {
   color: #ccc5b9;
   background-color: #252422;
 }
 
+@media screen and (max-width: 576px) {
+  .offcanvas-body-medium-large {
+    display: none;
+  }
+}
+
 .offcanvas-body-small {
   display: none;
+}
+@media screen and (max-width: 576px) {
+  .offcanvas-body-small {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn {
+    background-color: transparent;
+    padding: 0%;
+    border: none;
+    color: #ccc5b9;
+    font-size: 130%;
+  }
+  .btn:hover {
+    background-color: #eb5e28;
+    border: none;
+  }
 }
 
 .btn-close {
@@ -207,7 +272,6 @@ body header nav ul li a:hover {
   --bs-btn-close-bg: none;
   --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(235, 94, 40, 0.25);
 }
-
 .btn-close svg {
   color: #eb5e28;
 }
@@ -215,7 +279,6 @@ body header nav ul li a:hover {
 .list-side-bar {
   text-align: center;
 }
-
 .list-side-bar li {
   font-size: 1rem;
   width: 100%;
@@ -227,7 +290,6 @@ body header nav ul li a:hover {
   --bs-list-group-bg: #252422;
   border-radius: none;
 }
-
 .list-side-bar li:hover {
   background-color: #eb5e28;
 }
@@ -243,58 +305,6 @@ body header nav ul li a:hover {
   border-color: transparent;
 }
 
-@media (max-width: 768px) {
-  /* ------------------Estilo del header y nav------------------*/
-  .grid-container-navBar {
-    grid-template-areas: ".link-logo-nav .medium-screen-options svg";
-  }
-  .large-screen-options {
-    display: none;
-  }
-  .medium-screen-options {
-    display: block;
-  }
-  .btn {
-    background-color: transparent;
-    padding: 0%;
-    border: none;
-    color: #ccc5b9;
-    font-size: 130%;
-  }
-  .btn:hover {
-    background-color: #eb5e28;
-    border: none;
-  }
-  .dropdown-menu {
-    background-color: #252422;
-  }
-  .dropdown-item {
-    color: #ccc5b9;
-  }
-  .dropdown-item:active {
-    background-color: #eb5e28;
-  }
-}
-@media (max-width: 576px) {
-  /* ------------------Estilo del header y nav------------------*/
-  .grid-container-navBar {
-    grid-template-areas: ".link-logo-nav .medium-screen-options";
-    grid-template-columns: 50% 50%;
-  }
-  .medium-screen-options {
-    display: none;
-  }
-  .grid-container-navBar {
-    grid-template-areas: ".link-logo-nav svg";
-    grid-template-columns: 50% 50%;
-  }
-  .offcanvas-body-small {
-    display: block;
-  }
-  .offcanvas-body-medium-large {
-    display: none;
-  }
-}
 footer {
   position: relative;
   left: 0%;
@@ -311,6 +321,22 @@ footer {
   grid-template-columns: 30% 40% auto;
   grid-template-rows: 20% 50% auto 5%;
 }
+@media screen and (max-width: 768px) {
+  .grid-container-footer {
+    height: 35rem;
+    grid-template-areas: "social social social" "brioplants list-data list-data" "institutions institutions institutions" "copyright copyright copyright";
+    grid-template-columns: 30% 40% auto;
+    grid-template-rows: 20% 50% auto 7%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .grid-container-footer {
+    height: 40rem;
+    grid-template-areas: "social" "list-data" "institutions" "brioplants" "copyright";
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 30% 17% auto 6%;
+  }
+}
 
 .social-networks-list {
   grid-area: social;
@@ -326,10 +352,15 @@ footer {
   align-self: center;
   justify-self: center;
 }
-
 .logo-brioplants img {
   width: 10rem;
   height: 10rem;
+}
+@media screen and (max-width: 576px) {
+  .logo-brioplants img {
+    width: 8rem;
+    height: 8rem;
+  }
 }
 
 .list-footer-container {
@@ -339,22 +370,28 @@ footer {
   justify-content: space-around;
   align-items: center;
 }
-
 .list-footer-container p {
   font-size: 1.5rem;
   border-bottom: #252422 solid 2px;
   margin-bottom: 0.5rem;
 }
-
+@media screen and (max-width: 576px) {
+  .list-footer-container p {
+    font-size: 1rem;
+  }
+}
 .list-footer-container li {
   padding-bottom: 0.2rem;
 }
-
 .list-footer-container li a {
   font-size: 1rem;
 }
-
-.list-footer-container a:hover {
+@media screen and (max-width: 576px) {
+  .list-footer-container li a {
+    font-size: 0.8rem;
+  }
+}
+.list-footer-container li a:hover {
   color: #eb5e28;
   text-decoration: underline;
 }
@@ -370,45 +407,17 @@ footer {
   margin-bottom: 1rem;
   height: fit-content;
 }
+@media screen and (max-width: 768px) {
+  .copyright p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .copyright p {
+    font-size: 0.8rem;
+  }
+}
 
-@media (max-width: 768px) {
-  /* ------------------Footer------------------*/
-  .grid-container-footer {
-    height: 35rem;
-    grid-template-areas: "social social social" "brioplants list-data list-data" "institutions institutions institutions" "copyright copyright copyright";
-    grid-template-columns: 30% 40% auto;
-    grid-template-rows: 20% 50% auto 7%;
-  }
-  .copyright p {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 576px) {
-  /* ------------------Footer------------------*/
-  .grid-container-footer {
-    height: 40rem;
-    grid-template-areas: "social" "list-data" "institutions" "brioplants" "copyright";
-    grid-template-columns: 100%;
-    grid-template-rows: 20% 30% 17% auto 6%;
-  }
-  .logoMedium {
-    width: 6.2rem;
-    height: 3rem;
-  }
-  .logo-brioplants img {
-    width: 8rem;
-    height: 8rem;
-  }
-  .list-footer-container p {
-    font-size: 1rem;
-  }
-  .list-footer-container li a {
-    font-size: 0.8rem;
-  }
-  .copyright p {
-    font-size: 0.8rem;
-  }
-}
 /* ------------------Background------------------*/
 .background {
   background-attachment: fixed;
@@ -443,7 +452,10 @@ footer {
   color: #eb5e28;
   font-size: 1.3rem;
 }
-
+.float-bar .list-group-item {
+  background-color: transparent;
+  border-color: #eb5e28;
+}
 .float-bar .list-group-item.active {
   background-color: #eb5e28;
 }
@@ -464,11 +476,6 @@ footer {
 .list-group-item:last-child {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-}
-
-.float-bar .list-group-item {
-  background-color: transparent;
-  border-color: #eb5e28;
 }
 
 /* Tamaño y colores de texto de las secciones*/
@@ -492,6 +499,13 @@ main section#overview article div img {
   width: 100%;
   object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+  main section#overview article div img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+}
 
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='orange'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
@@ -513,6 +527,7 @@ main section#overview article div img {
 /* Ubico imagen anexa de fondo (ADN dorado)*/
 .divBackgroundImage {
   position: absolute;
+  color: #252422;
   top: 4rem;
   left: 0%;
 }
@@ -521,6 +536,13 @@ main section#about-us article {
   display: grid;
   grid-template-areas: "presentation" "cards" "disciplines";
   grid-template-rows: 25% 50% auto;
+}
+@media screen and (max-width: 768px) {
+  main section#about-us article {
+    display: grid;
+    grid-template-areas: "presentation" "cards";
+    grid-template-rows: 50% 50%;
+  }
 }
 
 .divPresentation {
@@ -532,7 +554,16 @@ main section#about-us article {
   margin-bottom: 2rem;
 }
 .divPresentation div p {
-  width: 50%;
+  width: 70%;
+}
+@media screen and (max-width: 768px) {
+  .divPresentation h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .divPresentation div p {
+    width: 70%;
+  }
 }
 
 .divCards {
@@ -566,26 +597,44 @@ main section#about-us article {
   font-size: large;
   height: fit-content;
 }
+@media screen and (max-width: 768px) {
+  .divDisciplines {
+    display: none;
+  }
+}
 
 /* z index mayor para que pise a la imagen de fondo anexa*/
 main section#about-us article .divPresentation {
   position: relative;
   z-index: 10;
 }
+main section#about-us article .divPresentation div p {
+  width: 60%;
+}
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 /* This container is needed to position the front and back side */
+.flip-card {
+  width: calc(22vw - 10px);
+  height: calc(22vw - 10px);
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 350px;
+  max-height: 350px;
+  perspective: 1000px;
+}
+
 .flip-card-inner {
-  margin-top: 2rem;
   position: relative;
-  max-width: 100%;
-  min-width: 20%;
-  width: 80%;
-  height: 80%;
+  width: calc(22vw - 10px);
+  height: calc(22vw - 10px);
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 350px;
+  max-height: 350px;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  border-radius: 50%;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -597,14 +646,26 @@ main section#about-us article .divPresentation {
 .flip-card-front, .flip-card-back {
   position: absolute;
   backface-visibility: hidden;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
   color: black;
+  border-radius: 50%;
+  width: calc(22vw - 10px);
+  height: calc(22vw - 10px);
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 350px;
+  max-height: 350px;
+}
+.flip-card-front img {
+  width: calc(22vw - 10px);
+  height: calc(22vw - 10px);
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 350px;
+  max-height: 350px;
 }
 
 /* Style the back side */
@@ -612,9 +673,16 @@ main section#about-us article .divPresentation {
   background-color: #eb5e28;
   color: #ccc5b9;
   transform: rotateY(180deg);
+  border-radius: 50%;
+  width: calc(22vw - 10px);
+  height: calc(22vw - 10px);
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 350px;
+  max-height: 350px;
 }
 .flip-card-back h3 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .flip-card-back p {
   width: 60%;
@@ -667,14 +735,6 @@ main section#research article div div ul li p {
   text-align: justify;
 }
 
-@media (max-width: 768px) {
-  /* ------------------Main Index------------------*/
-  main section#overview article div img {
-    height: 100%;
-    width: auto;
-    object-fit: cover;
-  }
-}
 /* ------------------Lobby------------------*/
 /* Estilo del lobby*/
 #lobby {
@@ -816,6 +876,12 @@ iframe {
 .logoMedium {
   width: 8rem;
   height: 3.5rem;
+}
+@media screen and (max-width: 576px) {
+  .logoMedium {
+    width: 6.2rem;
+    height: 3rem;
+  }
 }
 
 .widthAndHeightMax {
