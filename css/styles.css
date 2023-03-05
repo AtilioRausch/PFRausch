@@ -444,8 +444,8 @@ footer {
 /* ------------------Secciones index------------------*/
 .float-bar {
   position: fixed;
-  left: 90%;
-  top: 80%;
+  left: calc(100vw - 150px);
+  top: calc(100vh - 150px);
   z-index: 30;
 }
 .float-bar li a {
@@ -461,6 +461,11 @@ footer {
 }
 .float-bar .list-group-item.active a {
   color: #252422;
+}
+@media screen and (max-width: 576px) {
+  .float-bar {
+    display: none;
+  }
 }
 
 .list-group-item-action:focus, .list-group-item-action:hover {
@@ -487,6 +492,11 @@ main section#about-us {
   padding-top: 4rem;
   color: #ccc5b9;
 }
+@media screen and (max-width: 576px) {
+  main section#about-us {
+    height: 160vh;
+  }
+}
 
 main section#research {
   padding-top: 4rem;
@@ -495,16 +505,9 @@ main section#research {
 
 /* -----------Seccion overview-----------*/
 main section#overview article div img {
-  height: auto;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   object-fit: cover;
-}
-@media screen and (max-width: 768px) {
-  main section#overview article div img {
-    height: 100%;
-    width: auto;
-    object-fit: cover;
-  }
 }
 
 .carousel-control-prev-icon {
@@ -526,10 +529,18 @@ main section#overview article div img {
 /* -----------Seccion about-us-----------*/
 /* Ubico imagen anexa de fondo (ADN dorado)*/
 .divBackgroundImage {
+  display: flex;
+  justify-content: start;
+  align-content: end;
+}
+@media screen and (max-width: 576px) {
+  .divBackgroundImage {
+    justify-content: center;
+  }
+}
+.divBackgroundImage img {
   position: absolute;
-  color: #252422;
-  top: 4rem;
-  left: 0%;
+  bottom: 0;
 }
 
 main section#about-us article {
@@ -541,7 +552,7 @@ main section#about-us article {
   main section#about-us article {
     display: grid;
     grid-template-areas: "presentation" "cards";
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 40% auto;
   }
 }
 
@@ -549,18 +560,12 @@ main section#about-us article {
   grid-area: presentation;
   text-align: center;
 }
-.divPresentation h2 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
 .divPresentation div p {
   width: 70%;
+  border: #eb5e28 solid 2px;
+  background-color: #403d39;
 }
 @media screen and (max-width: 768px) {
-  .divPresentation h2 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
   .divPresentation div p {
     width: 70%;
   }
@@ -576,9 +581,6 @@ main section#about-us article {
 .divDisciplines {
   grid-area: disciplines;
   text-align: center;
-}
-.divDisciplines ul {
-  margin-top: 2rem;
 }
 .divDisciplines ul li {
   background-color: #eb5e28;
@@ -689,50 +691,59 @@ main section#about-us article .divPresentation div p {
 }
 
 /* -----------Sección research-----------*/
-/* Estilo de lista con scroll vertical*/
-main section#research article div div ul {
-  position: relative;
-  left: 5%;
+main section#research article {
+  height: 100%;
+  text-align: center;
+}
+main section#research article div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+main section#research article div p {
+  margin-bottom: 2rem;
+  width: 70%;
+  border: #eb5e28 solid 2px;
+  background-color: #403d39;
+}
+main section#research article .divListResearch {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+main section#research article .divListResearch ul {
   width: 90%;
-  height: 20rem;
+  height: 70%;
   overflow-y: scroll;
 }
-
-/* Estilo de elementos de lista*/
-main section#research article div div ul li {
+main section#research article .divListResearch ul li {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
   border: 4px groove #ccc5b9;
-  padding-top: 1.5%;
-  padding-bottom: 1.5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
-
-/* Elementos ubicados a la izquierda dentro de un elemento de lista*/
-.izquierda {
-  position: relative;
-  top: 0%;
-  left: 0%;
-  display: inline-block;
-  width: 20rem;
-  overflow: hidden;
+main section#research article .divListResearch ul li a {
+  display: flex;
+  align-items: center;
 }
-
-/* Elementos ubicados a la derecha dentro de un elemento de lista*/
-.derecha {
-  position: relative;
-  top: 0%;
-  left: 1%;
-  display: inline-block;
-  width: 55%;
+main section#research article .divListResearch ul li a img {
+  aspect-ratio: 12/12;
+  min-width: 200px;
+  width: calc(16vw - 10px);
 }
-
-/* Tamaño de imagenes dentro de la lista*/
-main section#research article div div ul li a img {
-  width: 15rem;
-  height: 15rem;
-}
-
-/* Configuración del texto dentro de la lista*/
-main section#research article div div ul li p {
+main section#research article .divListResearch ul li p {
+  border: #ccc5b9 solid 1px;
   text-align: justify;
+}
+@media screen and (max-width: 576px) {
+  main section#research article .divListResearch ul li {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* ------------------Lobby------------------*/
@@ -891,7 +902,7 @@ iframe {
 
 .fullScreen {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
 .row {
