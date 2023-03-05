@@ -65,26 +65,29 @@
 }
 
 /* Tamaño y colores de texto de las secciones*/
-main section#overview {
-    padding-top: 4rem;
-}
-main section#about-us {
-    padding-top: 4rem;
-    color: #ccc5b9;
-    @include mobile{
-        height: 160vh;
+main{
+    section#overview {
+        padding-top: 4rem;
     }
-}
-main section#research {
-    padding-top: 4rem;
-    color: #ccc5b9;
+    section#about-us {
+        padding-top: 4rem;
+        color: #ccc5b9;
+        min-height: 55rem;
+        @include mobile{
+            min-height: 100rem;
+        }
+    }
+    section#research {
+        padding-top: 4rem;
+        color: #ccc5b9;
+    }
 }
 
 /* -----------Seccion overview-----------*/
 
 main section#overview article div img{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     object-fit: cover;
 } 
 
