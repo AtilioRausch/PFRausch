@@ -1,72 +1,87 @@
 /* ------------------Lobby------------------*/
 
 /* Estilo del lobby*/
-#lobby {
-    width: 100%;
-    height: 46rem;
-    background-image: url("../images/lobby-background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+body main {
+    #lobby {
+        min-height: 844px;
+        min-width: 397px;
+        padding-top: 4rem;
+        background-image: url("https://img.freepik.com/vector-gratis/fondo-abstracto-ornamental-floral_52683-30016.jpg?w=1380&t=st=1678139359~exp=1678139959~hmac=bd4ca53cb6e5d2c046a0b9ecb40995e775c9d7a1d7ed811e77eab47fd667c915");
+        background-size: cover;
+        background-repeat: no-repeat;
 
-#lobby article {
-    position: relative;
-    top: 0%;
-    left: 0%;
-}
+        @include mobile {
+            height: 70rem;
+        }
 
-/* Estilo de h2*/
-#lobby article div h2 {
-    text-align: center;
-    color: #ccc5b9;
-}
+        article {
+            display: grid;
+            grid-template-areas: 'presentation'
+                'music';
+            grid-template-rows: 20% 70%;
 
-/* Estilo de lista vertical con scroll*/
-.listaVertical {
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-}
+            .grid-container-presentation {
+                grid-area: presentation;
 
-/* Posición de div que contiene lista vertical*/
-#lobby article div.playlists {
-    position: absolute;
-    top: 15rem;
-    left: 7%;
-    width: 22rem;
-    height: 20rem;
-}
+                .data {
+                    color: #ccc5b9;
 
-/* Posición de div que contiene información*/
-#lobby article div.data {
-    position: absolute;
-    top: 3rem;
-    left: 35%;
-    color: #ccc5b9;
-    text-align: center;
-    width: 30%;
-}
+                    h1 {
+                        text-align: center;
+                    }
 
-/* Posición de boton con referencia al home*/
-#lobby article div.data div button {
-    position: absolute;
-    top: 31rem;
-    left: 11.5rem;
-    width: 6rem;
-    height: 2rem;
-}
+                    div p {
+                        width: 45%;
+                        text-align: center;
 
-/* Posición de div que contiene lista vertical*/
-#lobby article div.songs {
-    position: absolute;
-    top: 15rem;
-    left: 70%;
-    width: 22rem;
-    height: 20rem;
-}
+                        @include tablet {
+                            width: 60%;
+                        }
+                    }
+                }
+            }
 
-/* Estilo de elementos de la lista ajustado al contenido*/
-#lobby article div ul li {
-    width: fit-content;
-    height: fit-content;
+            .grid-container-music {
+                grid-area: music;
+                display: grid;
+                grid-template-areas: 'playlist'
+                    'music';
+                grid-template-columns: 50% 50%;
+
+                @include mobile {
+                    display: block;
+                }
+            }
+
+            div div {
+                h2 {
+                    text-align: center;
+                    color: #ccc5b9;
+                }
+
+                .listaVertical {
+                    width: fit-content;
+                    height: 55%;
+                    overflow-y: scroll;
+
+                    @include mobile {
+                        height: 20rem;
+                        margin-bottom: 2rem;
+                    }
+
+                    li {
+                        width: fit-content;
+                        height: fit-content;
+                    }
+                }
+
+                iframe {
+                    width: calc(25vw - 10px);
+                    height: calc(10vw - 10px);
+                    min-width: 250px;
+                    min-height: 200px;
+                }
+            }
+        }
+    }
 }

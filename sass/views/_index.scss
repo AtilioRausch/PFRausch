@@ -1,4 +1,3 @@
-
 /* ------------------Background------------------*/
 
 .background {
@@ -30,27 +29,34 @@
     left: calc(100vw - 150px);
     top: calc(100vh - 150px);
     z-index: 30;
+
     li {
         a {
             color: #eb5e28;
             font-size: 1.3rem;
         }
     }
+
     .list-group-item {
         background-color: transparent;
         border-color: #eb5e28;
     }
+
     .list-group-item.active {
         background-color: #eb5e28;
-        a{
+
+        a {
             color: #252422;
         }
     }
-    @include mobile{
+
+    @include mobile {
         display: none;
     }
 }
-.list-group-item-action:focus, .list-group-item-action:hover {
+
+.list-group-item-action:focus,
+.list-group-item-action:hover {
     color: #eb5e28;
     background-color: inherit;
 }
@@ -59,25 +65,30 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
 .list-group-item:last-child {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
 
 /* Tamaño y colores de texto de las secciones*/
-main{
+main {
     min-width: 397px;
+
     section#overview {
         padding-top: 4rem;
     }
+
     section#about-us {
         padding-top: 4rem;
         color: #ccc5b9;
         min-height: 55rem;
-        @include mobile{
+
+        @include mobile {
             min-height: 90rem;
         }
     }
+
     section#research {
         padding-top: 4rem;
         color: #ccc5b9;
@@ -87,16 +98,18 @@ main{
 
 /* -----------Seccion overview-----------*/
 
-main section#overview article div img{
+main section#overview article div img {
     height: 100vh;
     width: 100%;
     object-fit: cover;
-} 
+}
 
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='orange'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
 }
-.carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
+
+.carousel-dark .carousel-control-next-icon,
+.carousel-dark .carousel-control-prev-icon {
     filter: none;
 }
 
@@ -107,6 +120,7 @@ main section#overview article div img{
 .carousel-dark .carousel-indicators [data-bs-target] {
     background-color: #eb5e28;
 }
+
 /* -----------Seccion about-us-----------*/
 
 /* Ubico imagen anexa de fondo (ADN dorado)*/
@@ -114,59 +128,67 @@ main section#overview article div img{
     display: flex;
     justify-content: start;
     align-content: end;
-    @include mobile{
+
+    @include mobile {
         justify-content: center;
     }
-    img{
+
+    img {
         position: absolute;
         bottom: 0;
     }
 
 }
 
-main section#about-us article{
+main section#about-us article {
     display: grid;
-    grid-template-areas:'presentation'
-                        'cards'
-                        'disciplines';
+    grid-template-areas: 'presentation'
+        'cards'
+        'disciplines';
     grid-template-rows: 25% 50% auto;
-    @include tablet{
+
+    @include tablet {
         display: grid;
-        grid-template-areas:'presentation'
-                            'cards';
+        grid-template-areas: 'presentation'
+            'cards';
         grid-template-rows: 40% auto;
     }
 }
 
-.divPresentation{
+.divPresentation {
     grid-area: presentation;
     text-align: center;
 
-    div{
-        p{
+    div {
+        p {
             width: 70%;
             border: #eb5e28 solid 2px;
             background-color: #403d39;
         }
     }
-    @include tablet{
-        div{
-            p{
+
+    @include tablet {
+        div {
+            p {
                 width: 70%;
             }
         }
     }
 }
-.divCards{
+
+.divCards {
     grid-area: cards;
-    img{
+
+    img {
         border-radius: 50%;
     }
 }
-.divDisciplines{
+
+.divDisciplines {
     grid-area: disciplines;
     text-align: center;
-    ul{ 
+
+    ul {
         li {
             background-color: #eb5e28;
             padding-left: 1rem;
@@ -177,7 +199,8 @@ main section#about-us article{
             justify-content: center;
             flex-wrap: wrap;
             align-content: center;
-            a{
+
+            a {
                 text-align: center;
                 color: #ccc5b9;
                 font-size: large;
@@ -185,24 +208,27 @@ main section#about-us article{
             }
         }
     }
-    @include tablet{
+
+    @include tablet {
         display: none;
     }
 }
+
 /* z index mayor para que pise a la imagen de fondo anexa*/
 main section#about-us article .divPresentation {
     position: relative;
     z-index: 10;
-    div{
-        p{
+
+    div {
+        p {
             width: 60%;
         }
-    }    
+    }
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-  
-  /* This container is needed to position the front and back side */
+
+/* This container is needed to position the front and back side */
 
 .flip-card {
     width: calc(22vw - 10px);
@@ -214,7 +240,7 @@ main section#about-us article .divPresentation {
     perspective: 1000px;
 }
 
-  .flip-card-inner {
+.flip-card-inner {
     position: relative;
     width: calc(22vw - 10px);
     height: calc(22vw - 10px);
@@ -226,20 +252,22 @@ main section#about-us article .divPresentation {
     transition: transform 0.8s;
     transform-style: preserve-3d;
 
-  }
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
     color: black;
     border-radius: 50%;
     width: calc(22vw - 10px);
@@ -248,7 +276,8 @@ main section#about-us article .divPresentation {
     min-height: 200px;
     max-width: 350px;
     max-height: 350px;
-    img{
+
+    img {
         width: calc(22vw - 10px);
         height: calc(22vw - 10px);
         min-width: 200px;
@@ -257,8 +286,8 @@ main section#about-us article .divPresentation {
         max-height: 350px;
     }
 }
-  
-  /* Style the back side */
+
+/* Style the back side */
 .flip-card-back {
     background-color: #eb5e28;
     color: #ccc5b9;
@@ -270,42 +299,50 @@ main section#about-us article .divPresentation {
     min-height: 200px;
     max-width: 350px;
     max-height: 350px;
-    h3{
+
+    h3 {
         margin-top: 1rem;
     }
-    p{
+
+    p {
         width: 60%;
     }
-  }
+}
 
 /* -----------Sección research-----------*/
 
-main section#research article{
+main section#research article {
     height: 100%;
     text-align: center;
-    div{
+
+    div {
         display: flex;
         justify-content: center;
         align-content: center;
-        p{
+
+        p {
             margin-bottom: 2rem;
             width: 70%;
             border: #eb5e28 solid 2px;
             background-color: #403d39;
         }
     }
-    .divListResearch{
+
+    .divListResearch {
         height: 65%;
         display: flex;
         justify-content: center;
         align-content: center;
+
         ul {
             width: 90%;
             height: auto;
             overflow-y: scroll;
-            @include mobile{
+
+            @include mobile {
                 margin-bottom: 6.5rem;
             }
+
             li {
                 display: flex;
                 justify-content: space-evenly;
@@ -313,25 +350,29 @@ main section#research article{
                 border: 4px groove #ccc5b9;
                 padding-top: 1%;
                 padding-bottom: 1%;
-                a{
+
+                a {
                     display: flex;
                     align-items: center;
+
                     img {
-                        aspect-ratio:12/12;
+                        aspect-ratio: 12/12;
                         min-width: 200px;
                         width: calc(16vw - 10px);
                     }
-                } 
+                }
+
                 p {
                     border: #ccc5b9 solid 1px;
                     text-align: justify;
                 }
-                @include mobile{
+
+                @include mobile {
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
                 }
             }
-        }    
+        }
     }
 }

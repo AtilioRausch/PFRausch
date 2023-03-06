@@ -145,6 +145,9 @@ header {
   z-index: 50;
 }
 
+.large-screen-options {
+  font-size: 0.9rem;
+}
 @media screen and (max-width: 768px) {
   .large-screen-options {
     display: none;
@@ -470,7 +473,8 @@ footer {
   }
 }
 
-.list-group-item-action:focus, .list-group-item-action:hover {
+.list-group-item-action:focus,
+.list-group-item-action:hover {
   color: #eb5e28;
   background-color: inherit;
 }
@@ -519,7 +523,8 @@ main section#overview article div img {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='orange'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
 }
 
-.carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
+.carousel-dark .carousel-control-next-icon,
+.carousel-dark .carousel-control-prev-icon {
   filter: none;
 }
 
@@ -650,7 +655,8 @@ main section#about-us article .divPresentation div p {
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   backface-visibility: hidden;
 }
@@ -758,74 +764,77 @@ main section#research article .divListResearch ul li p {
 
 /* ------------------Lobby------------------*/
 /* Estilo del lobby*/
-#lobby {
-  width: 100%;
-  height: 46rem;
-  background-image: url("../images/lobby-background.jpg");
+body main #lobby {
+  min-height: 844px;
+  min-width: 397px;
+  padding-top: 4rem;
+  background-image: url("https://img.freepik.com/vector-gratis/fondo-abstracto-ornamental-floral_52683-30016.jpg?w=1380&t=st=1678139359~exp=1678139959~hmac=bd4ca53cb6e5d2c046a0b9ecb40995e775c9d7a1d7ed811e77eab47fd667c915");
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-#lobby article {
-  position: relative;
-  top: 0%;
-  left: 0%;
+@media screen and (max-width: 576px) {
+  body main #lobby {
+    height: 70rem;
+  }
 }
-
-/* Estilo de h2*/
-#lobby article div h2 {
+body main #lobby article {
+  display: grid;
+  grid-template-areas: "presentation" "music";
+  grid-template-rows: 20% 70%;
+}
+body main #lobby article .grid-container-presentation {
+  grid-area: presentation;
+}
+body main #lobby article .grid-container-presentation .data {
+  color: #ccc5b9;
+}
+body main #lobby article .grid-container-presentation .data h1 {
+  text-align: center;
+}
+body main #lobby article .grid-container-presentation .data div p {
+  width: 45%;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  body main #lobby article .grid-container-presentation .data div p {
+    width: 60%;
+  }
+}
+body main #lobby article .grid-container-music {
+  grid-area: music;
+  display: grid;
+  grid-template-areas: "playlist" "music";
+  grid-template-columns: 50% 50%;
+}
+@media screen and (max-width: 576px) {
+  body main #lobby article .grid-container-music {
+    display: block;
+  }
+}
+body main #lobby article div div h2 {
   text-align: center;
   color: #ccc5b9;
 }
-
-/* Estilo de lista vertical con scroll*/
-.listaVertical {
-  width: 100%;
-  height: 100%;
+body main #lobby article div div .listaVertical {
+  width: fit-content;
+  height: 55%;
   overflow-y: scroll;
 }
-
-/* Posición de div que contiene lista vertical*/
-#lobby article div.playlists {
-  position: absolute;
-  top: 15rem;
-  left: 7%;
-  width: 22rem;
-  height: 20rem;
+@media screen and (max-width: 576px) {
+  body main #lobby article div div .listaVertical {
+    height: 20rem;
+    margin-bottom: 2rem;
+  }
 }
-
-/* Posición de div que contiene información*/
-#lobby article div.data {
-  position: absolute;
-  top: 3rem;
-  left: 35%;
-  color: #ccc5b9;
-  text-align: center;
-  width: 30%;
-}
-
-/* Posición de boton con referencia al home*/
-#lobby article div.data div button {
-  position: absolute;
-  top: 31rem;
-  left: 11.5rem;
-  width: 6rem;
-  height: 2rem;
-}
-
-/* Posición de div que contiene lista vertical*/
-#lobby article div.songs {
-  position: absolute;
-  top: 15rem;
-  left: 70%;
-  width: 22rem;
-  height: 20rem;
-}
-
-/* Estilo de elementos de la lista ajustado al contenido*/
-#lobby article div ul li {
+body main #lobby article div div .listaVertical li {
   width: fit-content;
   height: fit-content;
+}
+body main #lobby article div div iframe {
+  width: calc(25vw - 10px);
+  height: calc(10vw - 10px);
+  min-width: 250px;
+  min-height: 200px;
 }
 
 /* Estilos generales y fuentes */

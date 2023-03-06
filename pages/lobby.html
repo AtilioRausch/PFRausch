@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <!-- Ubuntu Light 300 -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
 
     <!--Boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -22,6 +24,7 @@
     <!--CSS main-->
     <link rel="stylesheet" href="../css/styles.css" />
 </head>
+
 <body>
 
     <header>
@@ -30,6 +33,7 @@
                 <img class="logoWide" src="../images/logo-navbar.png" alt="Logo de grupo - BrioPlants" />
             </a>
             <ul class="large-screen-options widthAndHeightMax">
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="./softwares.html">Softwares</a></li>
                 <li><a href="./databases.html">Databases</a></li>
                 <li><a href="./lobby.html">Lobby</a></li>
@@ -42,6 +46,9 @@
                     Fast access
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li>
+                        <a class="dropdown-item" href="../index.html">Home</a>
+                    </li>
                     <li>
                         <a class="dropdown-item" href="./softwares.html">Softwares</a>
                     </li>
@@ -89,6 +96,7 @@
                 </div>
                 <div class="offcanvas-body offcanvas-body-small">
                     <ul class="list-group list-side-bar">
+                        <li class="list-group-item"><a href="../index.html">Home</a></li>
                         <li class="list-group-item"><a href="./softwares.html">Softwares</a></li>
                         <li class="list-group-item"><a href="./databases.html">Databases</a></li>
                         <li class="list-group-item"><a href="./lobby.html">Lobby</a></li>
@@ -106,51 +114,84 @@
     </header>
 
     <main>
-        <section id="lobby">
-            <article>
-                <div class="playlists">
-                    <h2 class="separation">Favourite playlists</h2>
-                    <ul class="listaVertical">
-                        <li>
-                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXTdx4nYEjeS?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                        </li>
-                        <li>
-                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/5L6GbwWUM3Oi5GPnkmmp24?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                        </li>
-                        <li>
-                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/6xihzJv7xtLyRc420HlM0y?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                        </li>
-                        <li>
-                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/716NhGYqD1jl2wI1Qkgq36?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                        </li>
-                    </ul>
-                </div>
-                <div class="data">
-                    <div>
-                        <h1 class="separation">Lobby</h1>
-                        <p>Este espacio se encuentra diseñado para que se relaje luego de quemarse la cabeza con nuestros softwares, 
-                            sentate, poné al mango los auriculares y escuchate el temita de la china.
-                        </p>
-                    </div>
-                    <div>
-                        <a href="../index.html">
-                            <button class="button-85" role="button">Home</button>
-                        </a>
+        <section id="lobby" class="fullScreen">
+            <article class="widthAndHeightMax">
+                <div class="grid-container-presentation">
+                    <div class="data">
+                        <h1 class="separationVertical">Lobby</h1>
+                        <div class="d-flex justify-content-center">
+                            <p>Este espacio se encuentra diseñado para que se relaje luego de quemarse la cabeza con
+                                nuestros softwares,
+                                sentate, poné al mango los auriculares y escuchate el temita de la china.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="songs">
-                    <h2 class="separation">Favourite songs</h2>
-                    <ul class="listaVertical">
-                        <li>
-                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7LgHocBu4JUghhlAJqgNrS?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                        </li>
-                        <li>
-                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6CAaMCQKg9tcRuUbRfbxww?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                        </li>
-                        <li>
-                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/081HOMFxiTY9KkH9ouBv1W?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                        </li>    
-                    </ul>
+                <div class="grid-container-music">
+                    <div class="playlist">
+                        <h2 class="separationVertical">Favourite playlists</h2>
+                        <div class="d-flex justify-content-center widthAndHeightMax">
+                            <ul class="listaVertical">
+                                <li>
+                                    <iframe style="border-radius:12px"
+                                        src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXTdx4nYEjeS?utm_source=generator&theme=0"
+                                        width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                        loading="lazy"></iframe>
+                                </li>
+                                <li>
+                                    <iframe style="border-radius:12px"
+                                        src="https://open.spotify.com/embed/artist/5L6GbwWUM3Oi5GPnkmmp24?utm_source=generator&theme=0"
+                                        width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                        loading="lazy"></iframe>
+                                </li>
+                                <li>
+                                    <iframe style="border-radius:12px"
+                                        src="https://open.spotify.com/embed/artist/6xihzJv7xtLyRc420HlM0y?utm_source=generator&theme=0"
+                                        width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                        loading="lazy"></iframe>
+                                </li>
+                                <li>
+                                    <iframe style="border-radius:12px"
+                                        src="https://open.spotify.com/embed/artist/716NhGYqD1jl2wI1Qkgq36?utm_source=generator&theme=0"
+                                        width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                        loading="lazy"></iframe>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="music">
+                        <h2 class="separationVertical">Favourite songs</h2>
+                        <div class="d-flex justify-content-center widthAndHeightMax">
+                            <ul class="listaVertical">
+                                <li>
+                                    <iframe style="border-radius:12px"
+                                        src="https://open.spotify.com/embed/album/7LgHocBu4JUghhlAJqgNrS?utm_source=generator&theme=0"
+                                        width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                        loading="lazy"></iframe>
+                                </li>
+                                <li>
+                                    <iframe style="border-radius:12px"
+                                        src="https://open.spotify.com/embed/track/6CAaMCQKg9tcRuUbRfbxww?utm_source=generator&theme=0"
+                                        width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                        loading="lazy"></iframe>
+                                </li>
+                                <li>
+                                    <iframe style="border-radius:12px"
+                                        src="https://open.spotify.com/embed/track/081HOMFxiTY9KkH9ouBv1W?utm_source=generator&theme=0"
+                                        width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                        loading="lazy"></iframe>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </article>
         </section>
@@ -299,7 +340,8 @@
 
     <!--Boostrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
