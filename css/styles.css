@@ -388,13 +388,18 @@ footer {
 }
 @media screen and (max-width: 576px) {
   #index section#about-us {
-    height: 90rem;
+    height: 95rem;
   }
 }
 #index section#research {
   padding-top: 4rem;
   color: #ccc5b9;
-  min-height: 55rem;
+  min-height: 70rem;
+}
+@media screen and (max-width: 576px) {
+  #index section#research {
+    height: 85rem;
+  }
 }
 
 /* -----------Seccion overview-----------*/
@@ -469,13 +474,24 @@ footer {
 }
 @media screen and (max-width: 576px) {
   .divPresentation div p {
-    width: 90%;
+    width: 70%;
     max-height: 436px;
   }
 }
 
 .divCards {
   grid-area: cards;
+  margin-top: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .divCards {
+    margin: 2rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .divCards {
+    margin: 0%;
+  }
 }
 .divCards img {
   border-radius: 50%;
