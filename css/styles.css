@@ -736,6 +736,7 @@ body main #lobby article div div iframe {
 body #softwares {
   margin-top: 4rem;
   background-color: #252422;
+  height: 65rem;
 }
 body #softwares section article {
   color: #ccc5b9;
@@ -837,6 +838,7 @@ body #softwares section article div h2 {
 body #databases {
   margin-top: 4rem;
   background-color: #252422;
+  height: 50rem;
 }
 body #databases section article {
   color: #ccc5b9;
@@ -871,6 +873,7 @@ body #databases section article div h2 {
 body #contact {
   margin-top: 4rem;
   background-color: #252422;
+  height: 62rem;
 }
 body #contact section article {
   color: #ccc5b9;
