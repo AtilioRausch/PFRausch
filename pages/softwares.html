@@ -113,41 +113,159 @@
         </nav>
     </header>
 
-    <main>
-        <section>
+    <main id="softwares">
+        <section class="fullScreen">
             <article>
                 <div>
-                    <h1>Softwares</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum, necessitatibus. Ab omnis et
-                        molestias tempora minus aspernatur quia provident eum. Vero, ad voluptatem. Laborum, asperiores
-                        velit. Cupiditate dignissimos optio dolores!
-                        Assumenda necessitatibus, voluptatibus sint aperiam deleniti voluptatem dolores? Error
-                        inventore, fugit nobis ab veritatis vel reiciendis modi eos ut iusto adipisci! Voluptate
-                        molestiae dolorum, asperiores sequi eum officiis aspernatur iste?
-                        Rem, harum eaque, assumenda excepturi facilis incidunt deserunt reprehenderit debitis, corporis
-                        provident nam voluptatibus eos! Quaerat nisi in a placeat, reprehenderit, dolorum nam optio
-                        aspernatur ea eos odio labore sequi.</p>
-                    <input type="search" name="search" placeholder="Search">
+                    <h1 class="separationVertical">Softwares</h1>
+                    <div class="d-flex justify-content-center align-content-center">
+                        <p>In this section, we want to introduce you to the different software that we offer, both
+                            internal and external, so that you can choose the one that best suits your needs.
+
+                            Let's start with our own softwares. We have developed a wide range of programs ranging from
+                            basic genomic sequence analysis tools to specific ones such as phenotype prediction. All of
+                            our software has been designed to offer an optimal user experience and to help researchers
+                            achieve their goals efficiently and effectively.
+                            In addition, we provide access to third-party software that complements the analyzes that
+                            can be performed with our software.</p>
+                    </div>
+
+                    <div class="separationVertical row height d-flex justify-content-center align-items-center">
+                        <div class="col-md-4">
+                            <div class="search">
+                                <i class="fa fa-search"></i>
+                                <input type="text" class="form-control" placeholder="Search softwares">
+                                <button class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <h2>Own softwares</h2>
-                    <ul>
-                        <li>Software 1</li>
-                        <li>Software 2</li>
-                        <li>Software 3</li>
-                        <li>Software 4</li>
-                        <li>Software 5</li>
-                    </ul>
+                    <div id="carouselOwnSoftwares" class="widthAndHeightMax d-flex justify-content-center">
+                        <div class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active d-flex justify-content-center">
+                                    <div class="cards-wrapper">
+                                        <div class="card card-software" style="width: 18rem;">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <div class="d-flex justify-content-center align-content-center">
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title
+                                                        and
+                                                        make up the bulk of the card's content.</p>
+                                                </div>
+                                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cards-wrapper">
+                                        <div class="card card-software" style="width: 18rem;">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <div class="d-flex justify-content-center align-content-center">
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title
+                                                        and
+                                                        make up the bulk of the card's content.</p>
+                                                </div>
+                                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cards-wrapper">
+                                        <div class="card card-software" style="width: 18rem;">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <div class="d-flex justify-content-center align-content-center">
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title
+                                                        and
+                                                        make up the bulk of the card's content.</p>
+                                                </div>
+                                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselOwnSoftwares"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselOwnSoftwares"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <h2>External softwares</h2>
-                    <ul>
-                        <li>Software 1</li>
-                        <li>Software 2</li>
-                        <li>Software 3</li>
-                        <li>Software 4</li>
-                        <li>Software 5</li>
-                    </ul>
+                    <div id="carouselExternalSoftwares" class="widthAndHeightMax d-flex justify-content-center">
+                        <div class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active d-flex justify-content-center">
+                                    <div class="cards-wrapper">
+                                        <div class="card card-software" style="width: 18rem;">
+                                            <div class="card-body">
+                                                <h5 class="card-title">BlastN</h5>
+                                                <div class="d-flex justify-content-center align-content-center">
+                                                    <p class="card-text">To perform local alignments against different
+                                                        databases and alignments of pairs of sequences.</p>
+                                                </div>
+                                                <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome"
+                                                    target="_blank" class="btn btn-primary">To access</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cards-wrapper">
+                                        <div class="card card-software" style="width: 18rem;">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <div class="d-flex justify-content-center align-content-center">
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title
+                                                        and
+                                                        make up the bulk of the card's content.</p>
+                                                </div>
+                                                <a href="#" class="btn btn-primary">To access</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cards-wrapper">
+                                        <div class="card card-software" style="width: 18rem;">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <div class="d-flex justify-content-center align-content-center">
+                                                    <p class="card-text">Some quick example text to build on the card
+                                                        title
+                                                        and
+                                                        make up the bulk of the card's content.</p>
+                                                </div>
+                                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExternalSoftwares" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExternalSoftwares" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </article>
         </section>

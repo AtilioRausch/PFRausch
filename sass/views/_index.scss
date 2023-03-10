@@ -26,8 +26,8 @@
 
 .float-bar {
     position: fixed;
-    left: calc(100vw - 150px);
-    top: calc(100vh - 150px);
+    left: calc(100vw - 170px);
+    top: calc(100vh - 170px);
     z-index: 30;
 
     li {
@@ -72,20 +72,18 @@
 }
 
 /* Tamaño y colores de texto de las secciones*/
-main {
-    min-width: 397px;
-
-    section#overview {
-        padding-top: 4rem;
-    }
+#index {
+    min-width: 300px;
 
     section#about-us {
         padding-top: 4rem;
         color: #ccc5b9;
         min-height: 55rem;
-
+        @include tablet{
+            min-height: 950px;
+        }
         @include mobile {
-            min-height: 90rem;
+            height: 90rem;
         }
     }
 
@@ -98,7 +96,7 @@ main {
 
 /* -----------Seccion overview-----------*/
 
-main section#overview article div img {
+#index section#overview article div img {
     height: 100vh;
     width: 100%;
     object-fit: cover;
@@ -127,7 +125,8 @@ main section#overview article div img {
 .divBackgroundImage {
     display: flex;
     justify-content: start;
-    align-content: end;
+    align-content: center;
+
 
     @include mobile {
         justify-content: center;
@@ -136,11 +135,12 @@ main section#overview article div img {
     img {
         position: absolute;
         bottom: 0;
+        z-index: 0;
     }
 
 }
 
-main section#about-us article {
+#index section#about-us article {
     display: grid;
     grid-template-areas: 'presentation'
         'cards'
@@ -158,22 +158,22 @@ main section#about-us article {
 .divPresentation {
     grid-area: presentation;
     text-align: center;
-
     div {
         p {
+            z-index: 10;
             width: 70%;
             border: #eb5e28 solid 2px;
             background-color: #403d39;
-        }
-    }
-
-    @include tablet {
-        div {
-            p {
-                width: 70%;
+            @include tablet{
+                overflow-y: scroll;
+            }
+            @include mobile{
+                width: 90%;
+                max-height: 436px;
             }
         }
     }
+    
 }
 
 .divCards {
@@ -189,6 +189,8 @@ main section#about-us article {
     text-align: center;
 
     ul {
+        position: relative;
+        z-index: 10;
         li {
             background-color: #eb5e28;
             padding-left: 1rem;
@@ -211,18 +213,6 @@ main section#about-us article {
 
     @include tablet {
         display: none;
-    }
-}
-
-/* z index mayor para que pise a la imagen de fondo anexa*/
-main section#about-us article .divPresentation {
-    position: relative;
-    z-index: 10;
-
-    div {
-        p {
-            width: 60%;
-        }
     }
 }
 
@@ -311,7 +301,7 @@ main section#about-us article .divPresentation {
 
 /* -----------Sección research-----------*/
 
-main section#research article {
+#index section#research article {
     height: 100%;
     text-align: center;
 
@@ -321,10 +311,14 @@ main section#research article {
         align-content: center;
 
         p {
+            max-height: 436px;
             margin-bottom: 2rem;
             width: 70%;
             border: #eb5e28 solid 2px;
             background-color: #403d39;
+            @include tablet{
+                overflow-y: scroll;
+            }
         }
     }
 
@@ -338,7 +332,6 @@ main section#research article {
             width: 90%;
             height: auto;
             overflow-y: scroll;
-
             @include mobile {
                 margin-bottom: 6.5rem;
             }
@@ -363,6 +356,7 @@ main section#research article {
                 }
 
                 p {
+                    max-height: none;
                     border: #ccc5b9 solid 1px;
                     text-align: justify;
                 }

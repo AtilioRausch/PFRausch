@@ -4,7 +4,10 @@
 /*
 *  html5resetcss
 */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+/*
+*  html5resetcss
+*/
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -12,124 +15,6 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-}
-
-body {
-  line-height: 1;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-nav ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: none;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
-}
-
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input, select {
-  vertical-align: middle;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
-}
-
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title],
-dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input,
-select {
-  vertical-align: middle;
 }
 
 /* ------------------Estilo del header y nav------------------*/
@@ -140,7 +25,7 @@ header {
   margin-top: -4rem;
   width: 100%;
   height: 4rem;
-  min-width: 397px;
+  min-width: 300px;
   background-color: #252422;
   z-index: 50;
 }
@@ -313,9 +198,9 @@ footer {
   position: relative;
   left: 0%;
   top: 0%;
+  min-width: 300px;
   background-color: #ccc5b9;
   z-index: 40;
-  min-width: 397px;
 }
 
 .grid-container-footer {
@@ -331,7 +216,7 @@ footer {
     height: 35rem;
     grid-template-areas: "social social social" "brioplants list-data list-data" "institutions institutions institutions" "copyright copyright copyright";
     grid-template-columns: 30% 40% auto;
-    grid-template-rows: 20% 50% auto 7%;
+    grid-template-rows: 20% 45% auto 9%;
   }
 }
 @media screen and (max-width: 576px) {
@@ -408,8 +293,6 @@ footer {
 
 .copyright {
   grid-area: copyright;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
   height: fit-content;
 }
 @media screen and (max-width: 768px) {
@@ -449,8 +332,8 @@ footer {
 /* ------------------Secciones index------------------*/
 .float-bar {
   position: fixed;
-  left: calc(100vw - 150px);
-  top: calc(100vh - 150px);
+  left: calc(100vw - 170px);
+  top: calc(100vh - 170px);
   z-index: 30;
 }
 .float-bar li a {
@@ -490,30 +373,32 @@ footer {
 }
 
 /* Tamaño y colores de texto de las secciones*/
-main {
-  min-width: 397px;
+#index {
+  min-width: 300px;
 }
-main section#overview {
-  padding-top: 4rem;
-}
-main section#about-us {
+#index section#about-us {
   padding-top: 4rem;
   color: #ccc5b9;
   min-height: 55rem;
 }
-@media screen and (max-width: 576px) {
-  main section#about-us {
-    min-height: 90rem;
+@media screen and (max-width: 768px) {
+  #index section#about-us {
+    min-height: 950px;
   }
 }
-main section#research {
+@media screen and (max-width: 576px) {
+  #index section#about-us {
+    height: 90rem;
+  }
+}
+#index section#research {
   padding-top: 4rem;
   color: #ccc5b9;
   min-height: 55rem;
 }
 
 /* -----------Seccion overview-----------*/
-main section#overview article div img {
+#index section#overview article div img {
   height: 100vh;
   width: 100%;
   object-fit: cover;
@@ -541,7 +426,7 @@ main section#overview article div img {
 .divBackgroundImage {
   display: flex;
   justify-content: start;
-  align-content: end;
+  align-content: center;
 }
 @media screen and (max-width: 576px) {
   .divBackgroundImage {
@@ -551,15 +436,16 @@ main section#overview article div img {
 .divBackgroundImage img {
   position: absolute;
   bottom: 0;
+  z-index: 0;
 }
 
-main section#about-us article {
+#index section#about-us article {
   display: grid;
   grid-template-areas: "presentation" "cards" "disciplines";
   grid-template-rows: 25% 50% auto;
 }
 @media screen and (max-width: 768px) {
-  main section#about-us article {
+  #index section#about-us article {
     display: grid;
     grid-template-areas: "presentation" "cards";
     grid-template-rows: 40% auto;
@@ -571,13 +457,20 @@ main section#about-us article {
   text-align: center;
 }
 .divPresentation div p {
+  z-index: 10;
   width: 70%;
   border: #eb5e28 solid 2px;
   background-color: #403d39;
 }
 @media screen and (max-width: 768px) {
   .divPresentation div p {
-    width: 70%;
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 576px) {
+  .divPresentation div p {
+    width: 90%;
+    max-height: 436px;
   }
 }
 
@@ -591,6 +484,10 @@ main section#about-us article {
 .divDisciplines {
   grid-area: disciplines;
   text-align: center;
+}
+.divDisciplines ul {
+  position: relative;
+  z-index: 10;
 }
 .divDisciplines ul li {
   background-color: #eb5e28;
@@ -613,15 +510,6 @@ main section#about-us article {
   .divDisciplines {
     display: none;
   }
-}
-
-/* z index mayor para que pise a la imagen de fondo anexa*/
-main section#about-us article .divPresentation {
-  position: relative;
-  z-index: 10;
-}
-main section#about-us article .divPresentation div p {
-  width: 60%;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -702,38 +590,44 @@ main section#about-us article .divPresentation div p {
 }
 
 /* -----------Sección research-----------*/
-main section#research article {
+#index section#research article {
   height: 100%;
   text-align: center;
 }
-main section#research article div {
+#index section#research article div {
   display: flex;
   justify-content: center;
   align-content: center;
 }
-main section#research article div p {
+#index section#research article div p {
+  max-height: 436px;
   margin-bottom: 2rem;
   width: 70%;
   border: #eb5e28 solid 2px;
   background-color: #403d39;
 }
-main section#research article .divListResearch {
+@media screen and (max-width: 768px) {
+  #index section#research article div p {
+    overflow-y: scroll;
+  }
+}
+#index section#research article .divListResearch {
   height: 65%;
   display: flex;
   justify-content: center;
   align-content: center;
 }
-main section#research article .divListResearch ul {
+#index section#research article .divListResearch ul {
   width: 90%;
   height: auto;
   overflow-y: scroll;
 }
 @media screen and (max-width: 576px) {
-  main section#research article .divListResearch ul {
+  #index section#research article .divListResearch ul {
     margin-bottom: 6.5rem;
   }
 }
-main section#research article .divListResearch ul li {
+#index section#research article .divListResearch ul li {
   display: flex;
   justify-content: space-evenly;
   align-content: center;
@@ -741,21 +635,22 @@ main section#research article .divListResearch ul li {
   padding-top: 1%;
   padding-bottom: 1%;
 }
-main section#research article .divListResearch ul li a {
+#index section#research article .divListResearch ul li a {
   display: flex;
   align-items: center;
 }
-main section#research article .divListResearch ul li a img {
+#index section#research article .divListResearch ul li a img {
   aspect-ratio: 12/12;
   min-width: 200px;
   width: calc(16vw - 10px);
 }
-main section#research article .divListResearch ul li p {
+#index section#research article .divListResearch ul li p {
+  max-height: none;
   border: #ccc5b9 solid 1px;
   text-align: justify;
 }
 @media screen and (max-width: 576px) {
-  main section#research article .divListResearch ul li {
+  #index section#research article .divListResearch ul li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -765,8 +660,7 @@ main section#research article .divListResearch ul li p {
 /* ------------------Lobby------------------*/
 /* Estilo del lobby*/
 body main #lobby {
-  min-height: 844px;
-  min-width: 397px;
+  min-height: 870px;
   padding-top: 4rem;
   background-image: url("https://img.freepik.com/vector-gratis/fondo-abstracto-ornamental-floral_52683-30016.jpg?w=1380&t=st=1678139359~exp=1678139959~hmac=bd4ca53cb6e5d2c046a0b9ecb40995e775c9d7a1d7ed811e77eab47fd667c915");
   background-size: cover;
@@ -794,10 +688,12 @@ body main #lobby article .grid-container-presentation .data h1 {
 body main #lobby article .grid-container-presentation .data div p {
   width: 45%;
   text-align: center;
+  max-height: 144px;
 }
 @media screen and (max-width: 768px) {
   body main #lobby article .grid-container-presentation .data div p {
     width: 60%;
+    overflow-y: scroll;
   }
 }
 body main #lobby article .grid-container-music {
@@ -837,6 +733,187 @@ body main #lobby article div div iframe {
   min-height: 200px;
 }
 
+body #softwares {
+  margin-top: 4rem;
+  background-color: #252422;
+}
+body #softwares section article {
+  color: #ccc5b9;
+  text-align: center;
+}
+body #softwares section article div p {
+  width: 70%;
+}
+body #softwares section article div input {
+  background-color: #ccc5b9;
+}
+body #softwares section article div h2 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.search input {
+  height: 60px;
+  text-indent: 25px;
+  border: 2px solid #ccc5b9;
+}
+.search input:focus {
+  box-shadow: none;
+  border: 2px solid #eb5e28;
+}
+.search .fa-search {
+  position: absolute;
+  top: 20px;
+  left: 16px;
+}
+.search button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 50px;
+  width: 110px;
+  border: none;
+  background-color: #252422;
+}
+.search button:hover {
+  background-color: #eb5e28;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.card {
+  border: none;
+  background-color: dimgrey;
+  border-radius: 0;
+  margin: 0 0.5rem;
+}
+.card .card-title {
+  margin-bottom: 1rem;
+}
+.card .card-text {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.card-software {
+  height: 15rem;
+}
+
+.btn-primary {
+  --bs-btn-color: #ccc5b9;
+  --bs-btn-bg: #252422;
+  --bs-btn-border-color: #252422;
+  --bs-btn-hover-color: #ccc5b9;
+  --bs-btn-hover-bg: #eb5e28;
+  --bs-btn-hover-border-color: #eb5e28;
+  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-active-color: #ccc5b9;
+  --bs-btn-active-bg: #eb5e28;
+  --bs-btn-active-border-color: #eb5e28;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #ccc5b9;
+  --bs-btn-disabled-bg: #252422;
+  --bs-btn-disabled-border-color: #252422;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5vh;
+  height: 5vh;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search {
+  position: relative;
+  box-shadow: 0 0 40px #252422;
+}
+
+body #databases {
+  margin-top: 4rem;
+  background-color: #252422;
+}
+body #databases section article {
+  color: #ccc5b9;
+  text-align: center;
+}
+body #databases section article div p {
+  width: 70%;
+  margin-bottom: 2rem;
+}
+body #databases section article div input {
+  background-color: #ccc5b9;
+}
+body #databases section article div h2 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+#carouselDatabases {
+  height: 30rem;
+}
+#carouselDatabases .carousel-inner {
+  height: 100%;
+}
+
+.card-database {
+  height: 20rem;
+}
+.card-database .card-body {
+  height: 100%;
+}
+
+body #contact {
+  margin-top: 4rem;
+  background-color: #252422;
+}
+body #contact section article {
+  color: #ccc5b9;
+  text-align: center;
+}
+body #contact section article div p {
+  width: 70%;
+  margin-bottom: 2rem;
+}
+body #contact section article div input {
+  background-color: #ccc5b9;
+}
+body #contact section article div h2 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+body #contact form {
+  width: 50%;
+}
+body #contact form fieldset legend {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: auto;
+}
+body #contact form fieldset textarea {
+  height: 179px;
+}
+body #contact form .form-control {
+  color: #252422;
+  background-color: #ccc5b9;
+  border: var(--bs-border-width) solid #252422;
+}
+body #contact form .form-control:focus {
+  border-color: #eb5e28;
+  box-shadow: 0 0 0 0.25rem #eb5e28;
+}
+body #contact button {
+  width: 150px;
+  height: 75px;
+  border: 2px solid #eb5e28;
+  margin-top: 1rem;
+}
+
 /* Estilos generales y fuentes */
 a {
   color: #252422;
@@ -861,10 +938,14 @@ h3 {
 p {
   font-family: "Ubuntu", sans-serif;
   font-size: medium;
+  height: fit-content;
+  margin: 0%;
 }
 
 ul {
   list-style-type: none;
+  padding: 0%;
+  margin: 0;
 }
 
 li {

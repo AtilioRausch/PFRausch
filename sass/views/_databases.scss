@@ -1,0 +1,38 @@
+body #databases {
+    margin-top: 4rem;
+    background-color: #252422;
+    section {
+        article {
+            color: #ccc5b9;
+            text-align: center;
+
+            div {
+                p {
+                    width: 70%;
+                    margin-bottom: 2rem;
+                }
+
+                input {
+                    background-color: #ccc5b9;
+                }
+                h2{
+                    margin-bottom: 2rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+#carouselDatabases{
+    height: 30rem;
+    .carousel-inner{
+        height: 100%;
+    }
+}
+.card-database{
+    height: 20rem;
+    .card-body{
+        height: 100%;
+    }
+}

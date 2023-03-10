@@ -1,0 +1,118 @@
+body #softwares{
+    margin-top: 4rem;
+    background-color: #252422;
+
+    section {
+        article {
+            color: #ccc5b9;
+            text-align: center;
+
+            div {
+                p {
+                    width: 70%;
+                }
+
+                input {
+                    background-color: #ccc5b9;
+                }
+                h2{
+                    margin-bottom: 2rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.search {
+    input {
+        height: 60px;
+        text-indent: 25px;
+        border: 2px solid #ccc5b9;
+
+        &:focus {
+            box-shadow: none;
+            border: 2px solid #eb5e28;
+        }
+
+
+    }
+
+    .fa-search {
+        position: absolute;
+        top: 20px;
+        left: 16px;
+
+    }
+
+    button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 50px;
+        width: 110px;
+        border: none;
+        background-color: #252422;
+        &:hover{
+            background-color: #eb5e28;
+        }
+    }
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.card{
+    border: none;
+    background-color:dimgrey;
+    border-radius: 0;
+    margin: 0 0.5rem;
+    .card-title {
+        margin-bottom: 1rem;
+    }
+
+    .card-text {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+}
+.card-software {
+    height: 15rem;
+}
+
+.btn-primary {
+    --bs-btn-color: #ccc5b9;
+    --bs-btn-bg: #252422;
+    --bs-btn-border-color: #252422;
+    --bs-btn-hover-color: #ccc5b9;
+    --bs-btn-hover-bg: #eb5e28;
+    --bs-btn-hover-border-color: #eb5e28;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #ccc5b9;
+    --bs-btn-active-bg: #eb5e28;
+    --bs-btn-active-border-color: #eb5e28;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #ccc5b9;
+    --bs-btn-disabled-bg: #252422;
+    --bs-btn-disabled-border-color: #252422;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5vh;
+    height: 5vh;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.search {
+    position: relative;
+    box-shadow: 0 0 40px #252422;
+
+}
+

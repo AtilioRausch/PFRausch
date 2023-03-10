@@ -3,8 +3,7 @@
 /* Estilo del lobby*/
 body main {
     #lobby {
-        min-height: 844px;
-        min-width: 397px;
+        min-height: 870px;
         padding-top: 4rem;
         background-image: url("https://img.freepik.com/vector-gratis/fondo-abstracto-ornamental-floral_52683-30016.jpg?w=1380&t=st=1678139359~exp=1678139959~hmac=bd4ca53cb6e5d2c046a0b9ecb40995e775c9d7a1d7ed811e77eab47fd667c915");
         background-size: cover;
@@ -33,9 +32,10 @@ body main {
                     div p {
                         width: 45%;
                         text-align: center;
-
+                        max-height: 144px;
                         @include tablet {
                             width: 60%;
+                            overflow-y: scroll;
                         }
                     }
                 }

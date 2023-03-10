@@ -113,11 +113,12 @@
         </nav>
     </header>
 
-    <main>
-        <section>
+    <main id="databases">
+        <section class="fullScreen">
             <article>
                 <div>
-                    <h1>Databases</h1>
+                    <h1 class="separationVertical">Databases</h1>
+                    <div class="d-flex justify-content-center align-content-center">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore dolore velit nam perspiciatis
                         vitae nisi exercitationem ad eos odio libero necessitatibus doloribus, atque nihil.
                         Necessitatibus aut ad possimus at illum?
@@ -133,19 +134,67 @@
                         Quas, accusamus natus sit impedit vero voluptate pariatur aliquid! Aut commodi in veniam amet,
                         suscipit laudantium ipsam eveniet voluptate temporibus incidunt possimus deserunt doloribus!
                         Ratione fugit praesentium mollitia eum fugiat?</p>
+                    </div>
                 </div>
-                <div>
-                    <ul>
-                        <li>Database 1</li>
-                        <li>Database 2</li>
-                        <li>Database 3</li>
-                        <li>Database 4</li>
-                        <li>Database 5</li>
-                        <li>Database 6</li>
-                        <li>Database 7</li>
-                        <li>Database 8</li>
-                    </ul>
+                <div id="carouselDatabases" class="widthAndHeightMax d-flex justify-content-center align-content-center flex-wrap">
+                    <div class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active d-flex">
+                                <div class="cards-wrapper">
+                                    <div class="card card-database" style="width: 18rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <div class="d-flex justify-content-center align-content-center">
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and
+                                                    make up the bulk of the card's content.</p>
+                                                </div>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cards-wrapper">
+                                    <div class="card card-database" style="width: 18rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <div class="d-flex justify-content-center align-content-center">
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and
+                                                    make up the bulk of the card's content.</p>
+                                                </div>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cards-wrapper">
+                                    <div class="card card-database" style="width: 18rem;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <div class="d-flex justify-content-center align-content-center">
+                                                <p class="card-text">Some quick example text to build on the card title
+                                                    and
+                                                    make up the bulk of the card's content.</p>
+                                                </div>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDatabases"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselDatabases"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
+            </div>
             </article>
         </section>
     </main>
