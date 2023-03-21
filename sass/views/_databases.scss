@@ -1,7 +1,8 @@
 body #databases {
     margin-top: 4rem;
     background-color: #252422;
-    height: 50rem;
+    height: auto;
+    min-width: 300px;
 
     section {
         article {
@@ -17,7 +18,8 @@ body #databases {
                 input {
                     background-color: #ccc5b9;
                 }
-                h2{
+
+                h2 {
                     margin-bottom: 2rem;
                     margin-top: 1rem;
                 }
@@ -26,15 +28,41 @@ body #databases {
     }
 }
 
-#carouselDatabases{
-    height: 30rem;
-    .carousel-inner{
+#carouselDatabasesLarge {
+    width: 75vw;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    .card-databases {
+        height: 30rem;
+    }
+
+    .carousel-inner {
         height: 100%;
+
+        .card-body {
+            height: 100%;
+        }
     }
 }
-.card-database{
-    height: 20rem;
-    .card-body{
-        height: 100%;
+
+#large-screen-databases {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    display: flex;
+    justify-content: center;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+#small-screen-databases {
+    padding-bottom: 2rem;
+    display: none;
+
+    @include mobile {
+        display: flex;
+        justify-content: center;
     }
 }

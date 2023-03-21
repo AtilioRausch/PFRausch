@@ -1,7 +1,8 @@
-body #softwares{
+body #softwares {
     margin-top: 4rem;
     background-color: #252422;
-    height: 65rem;
+    height: auto;
+    min-width: 300px;
 
     section {
         article {
@@ -16,7 +17,8 @@ body #softwares{
                 input {
                     background-color: #ccc5b9;
                 }
-                h2{
+
+                h2 {
                     margin-bottom: 2rem;
                     margin-top: 1rem;
                 }
@@ -26,6 +28,8 @@ body #softwares{
 }
 
 .search {
+    align-items: center;
+
     input {
         height: 60px;
         text-indent: 25px;
@@ -54,7 +58,8 @@ body #softwares{
         width: 110px;
         border: none;
         background-color: #252422;
-        &:hover{
+
+        &:hover {
             background-color: #eb5e28;
         }
     }
@@ -67,11 +72,12 @@ body #softwares{
     text-align: center;
 }
 
-.card{
+.card {
     border: none;
-    background-color:dimgrey;
+    background-color: dimgrey;
     border-radius: 0;
     margin: 0 0.5rem;
+
     .card-title {
         margin-bottom: 1rem;
     }
@@ -81,6 +87,39 @@ body #softwares{
         width: 100%;
     }
 }
+
+#large-screen-own-softwares,
+#large-screen-external-softwares {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+#small-screen-own-softwares,
+#small-screen-external-softwares {
+    padding-bottom: 2rem;
+    display: none;
+
+    @include mobile {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#carouselOwnSoftwaresLarge,
+#carouselExternalSoftwaresLarge {
+    width: 75vw;
+
+    .card-databases {
+        height: 20rem;
+    }
+}
+
+
 .card-software {
     height: 15rem;
 }
@@ -92,7 +131,7 @@ body #softwares{
     --bs-btn-hover-color: #ccc5b9;
     --bs-btn-hover-bg: #eb5e28;
     --bs-btn-hover-border-color: #eb5e28;
-    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: #ccc5b9;
     --bs-btn-active-bg: #eb5e28;
     --bs-btn-active-border-color: #eb5e28;
@@ -116,4 +155,3 @@ body #softwares{
     box-shadow: 0 0 40px #252422;
 
 }
-

@@ -1,12 +1,6 @@
 @charset "UTF-8";
 /* Reset CSS, margin y padding, porque valor
  por defecto varía entre navegadores */
-/*
-*  html5resetcss
-*/
-/*
-*  html5resetcss
-*/
 * {
   margin: 0;
   padding: 0;
@@ -143,11 +137,9 @@ body header nav svg {
 
 @media screen and (max-width: 768px) {
   .btn {
-    background-color: transparent;
-    padding: 0%;
-    border: none;
+    background-color: #252422;
     color: #ccc5b9;
-    font-size: 130%;
+    border-color: #252422;
   }
   .btn:hover {
     background-color: #eb5e28;
@@ -587,7 +579,7 @@ footer {
 
 /* Style the back side */
 .flip-card-back {
-  background-color: #eb5e28;
+  background-color: black;
   color: #ccc5b9;
   transform: rotateY(180deg);
   border-radius: 50%;
@@ -678,7 +670,7 @@ footer {
 body main #lobby {
   min-height: 870px;
   padding-top: 4rem;
-  background-image: url("https://img.freepik.com/vector-gratis/fondo-abstracto-ornamental-floral_52683-30016.jpg?w=1380&t=st=1678139359~exp=1678139959~hmac=bd4ca53cb6e5d2c046a0b9ecb40995e775c9d7a1d7ed811e77eab47fd667c915");
+  background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -752,7 +744,8 @@ body main #lobby article div div iframe {
 body #softwares {
   margin-top: 4rem;
   background-color: #252422;
-  height: 65rem;
+  height: auto;
+  min-width: 300px;
 }
 body #softwares section article {
   color: #ccc5b9;
@@ -769,6 +762,9 @@ body #softwares section article div h2 {
   margin-top: 1rem;
 }
 
+.search {
+  align-items: center;
+}
 .search input {
   height: 60px;
   text-indent: 25px;
@@ -817,6 +813,41 @@ body #softwares section article div h2 {
   width: 100%;
 }
 
+#large-screen-own-softwares,
+#large-screen-external-softwares {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+@media screen and (max-width: 576px) {
+  #large-screen-own-softwares,
+  #large-screen-external-softwares {
+    display: none;
+  }
+}
+
+#small-screen-own-softwares,
+#small-screen-external-softwares {
+  padding-bottom: 2rem;
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  #small-screen-own-softwares,
+  #small-screen-external-softwares {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+#carouselOwnSoftwaresLarge,
+#carouselExternalSoftwaresLarge {
+  width: 75vw;
+}
+#carouselOwnSoftwaresLarge .card-databases,
+#carouselExternalSoftwaresLarge .card-databases {
+  height: 20rem;
+}
+
 .card-software {
   height: 15rem;
 }
@@ -828,7 +859,7 @@ body #softwares section article div h2 {
   --bs-btn-hover-color: #ccc5b9;
   --bs-btn-hover-bg: #eb5e28;
   --bs-btn-hover-border-color: #eb5e28;
-  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #ccc5b9;
   --bs-btn-active-bg: #eb5e28;
   --bs-btn-active-border-color: #eb5e28;
@@ -854,7 +885,8 @@ body #softwares section article div h2 {
 body #databases {
   margin-top: 4rem;
   background-color: #252422;
-  height: 50rem;
+  height: auto;
+  min-width: 300px;
 }
 body #databases section article {
   color: #ccc5b9;
@@ -872,24 +904,49 @@ body #databases section article div h2 {
   margin-top: 1rem;
 }
 
-#carouselDatabases {
+#carouselDatabasesLarge {
+  width: 75vw;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+#carouselDatabasesLarge .card-databases {
   height: 30rem;
 }
-#carouselDatabases .carousel-inner {
+#carouselDatabasesLarge .carousel-inner {
+  height: 100%;
+}
+#carouselDatabasesLarge .carousel-inner .card-body {
   height: 100%;
 }
 
-.card-database {
-  height: 20rem;
+#large-screen-databases {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  display: flex;
+  justify-content: center;
 }
-.card-database .card-body {
-  height: 100%;
+@media screen and (max-width: 576px) {
+  #large-screen-databases {
+    display: none;
+  }
+}
+
+#small-screen-databases {
+  padding-bottom: 2rem;
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  #small-screen-databases {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 body #contact {
   margin-top: 4rem;
   background-color: #252422;
-  height: 62rem;
+  height: auto;
+  min-width: 300px;
 }
 body #contact section article {
   color: #ccc5b9;
@@ -907,7 +964,17 @@ body #contact section article div h2 {
   margin-top: 1rem;
 }
 body #contact form {
-  width: 50%;
+  width: 55%;
+}
+@media screen and (max-width: 768px) {
+  body #contact form {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 576px) {
+  body #contact form {
+    width: 85%;
+  }
 }
 body #contact form fieldset legend {
   margin-top: 1rem;
@@ -916,6 +983,9 @@ body #contact form fieldset legend {
 }
 body #contact form fieldset textarea {
   height: 179px;
+}
+body #contact form fieldset div label {
+  overflow-wrap: break-word;
 }
 body #contact form .form-control {
   color: #252422;
@@ -931,6 +1001,7 @@ body #contact button {
   height: 75px;
   border: 2px solid #eb5e28;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* Estilos generales y fuentes */
@@ -942,16 +1013,20 @@ a {
 h1 {
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
+  text-decoration: underline;
+  color: #eb5e28;
 }
 
 h2 {
   font-family: "Oswald", sans-serif;
   font-size: 1.75rem;
+  color: #eb5e28;
 }
 
 h3 {
   font-family: "Oswald", sans-serif;
   font-size: 1.5rem;
+  color: #eb5e28;
 }
 
 p {

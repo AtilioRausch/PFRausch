@@ -79,9 +79,11 @@
         padding-top: 4rem;
         color: #ccc5b9;
         min-height: 55rem;
-        @include tablet{
+
+        @include tablet {
             min-height: 950px;
         }
+
         @include mobile {
             height: 95rem;
         }
@@ -91,7 +93,8 @@
         padding-top: 4rem;
         color: #ccc5b9;
         min-height: 70rem;
-        @include mobile{
+
+        @include mobile {
             height: 85rem;
         }
     }
@@ -161,33 +164,39 @@
 .divPresentation {
     grid-area: presentation;
     text-align: center;
+
     div {
         p {
             z-index: 10;
             width: 70%;
             border: #eb5e28 solid 2px;
             background-color: #403d39;
-            @include tablet{
+
+            @include tablet {
                 overflow-y: scroll;
             }
-            @include mobile{
+
+            @include mobile {
                 width: 70%;
                 max-height: 436px;
             }
         }
     }
-    
+
 }
 
 .divCards {
     grid-area: cards;
     margin-top: 3rem;
-    @include tablet{
+
+    @include tablet {
         margin: 2rem;
     }
-    @include mobile{
+
+    @include mobile {
         margin: 0%;
     }
+
     img {
         border-radius: 50%;
     }
@@ -200,6 +209,7 @@
     ul {
         position: relative;
         z-index: 10;
+
         li {
             background-color: #eb5e28;
             padding-left: 1rem;
@@ -288,7 +298,7 @@
 
 /* Style the back side */
 .flip-card-back {
-    background-color: #eb5e28;
+    background-color: black;
     color: #ccc5b9;
     transform: rotateY(180deg);
     border-radius: 50%;
@@ -325,7 +335,8 @@
             width: 70%;
             border: #eb5e28 solid 2px;
             background-color: #403d39;
-            @include tablet{
+
+            @include tablet {
                 overflow-y: scroll;
             }
         }
@@ -341,6 +352,7 @@
             width: 90%;
             height: auto;
             overflow-y: scroll;
+
             @include mobile {
                 margin-bottom: 6.5rem;
             }

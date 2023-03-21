@@ -111,6 +111,7 @@ footer {
 .copyright {
     grid-area: copyright;
     height: fit-content;
+
     p {
         @include tablet {
             font-size: 1rem;

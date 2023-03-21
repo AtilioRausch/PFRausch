@@ -126,11 +126,9 @@ body header nav {
 
 .btn {
     @include tablet {
-        background-color: transparent;
-        padding: 0%;
-        border: none;
+        background-color: #252422;
         color: #ccc5b9;
-        font-size: 130%;
+        border-color: #252422;
 
         &:hover {
             background-color: #eb5e28;

@@ -1,7 +1,8 @@
 body #contact {
     margin-top: 4rem;
     background-color: #252422;
-    height: 62rem;
+    height: auto;
+    min-width: 300px;
 
     section {
         article {
@@ -27,7 +28,15 @@ body #contact {
     }
 
     form {
-        width: 50%;
+        width: 55%;
+
+        @include tablet {
+            width: 75%;
+        }
+
+        @include mobile {
+            width: 85%;
+        }
 
         fieldset {
             legend {
@@ -35,8 +44,15 @@ body #contact {
                 margin-bottom: 1rem;
                 width: auto;
             }
-            textarea{
+
+            textarea {
                 height: 179px;
+            }
+
+            div {
+                label {
+                    overflow-wrap: break-word;
+                }
             }
         }
 
@@ -44,7 +60,9 @@ body #contact {
 
             color: #252422;
             background-color: #ccc5b9;
-            border: var(--bs-border-width) solid #252422;;
+            border: var(--bs-border-width) solid #252422;
+            ;
+
             &:focus {
 
                 border-color: #eb5e28;
@@ -52,10 +70,12 @@ body #contact {
             }
         }
     }
-    button{
+
+    button {
         width: 150px;
         height: 75px;
         border: 2px solid #eb5e28;
         margin-top: 1rem;
+        margin-bottom: 2rem;
     }
 }
