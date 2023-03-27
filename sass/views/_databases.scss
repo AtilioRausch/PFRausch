@@ -94,21 +94,21 @@ body #databases {
 $backgroundPosition: center;
 
 .geo {
-    background-image: url("../../images/database.svg");
+    background-image: url("../images/database.png");
     background-position: $backgroundPosition;
 }
 /home/atilio/Escritorio/Coderhouse/PreEntrega2Rausch/images
 .ncbi {
-    background-image: url("../../images/align.svg");
+    background-image: url("../images/align.png");
     background-position: $backgroundPosition;
 }
 
 .biostudies {
-    background-image: url("../../images/protein-1.svg");
+    background-image: url("../images/protein-1.png");
     background-position: $backgroundPosition;
 }
 
 .uniprot {
-    background-image: url("../../images/protein-2.svg");
+    background-image: url("../images/protein-2.png");
     background-position: $backgroundPosition;
 }
