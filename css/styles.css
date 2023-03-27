@@ -886,42 +886,42 @@ body #softwares section article div h2 {
 
 /* Fondos de cartas */
 .frustratometer {
-  background-image: url("../../images/protein-1.svg");
+  background-image: url("../images/protein-1.png");
   background-position: center;
 }
 
 .ensembl {
-  background-image: url("../../images/database.svg");
+  background-image: url("../images/database.png");
   background-position: center;
 }
 
 .kalign {
-  background-image: url("../../images/align.svg");
+  background-image: url("../images/align.png");
   background-position: center;
 }
 
 .clustalw {
-  background-image: url("../../images/align.svg");
+  background-image: url("../images/align.png");
   background-position: center;
 }
 
 .blastn {
-  background-image: url("../../images/align.svg");
+  background-image: url("../images/align.png");
   background-position: center;
 }
 
 .blastp {
-  background-image: url("../../images/protein-1.svg");
+  background-image: url("../images/protein-1.png");
   background-position: center;
 }
 
 .blast {
-  background-image: url("../../images/align.svg");
+  background-image: url("../images/align.png");
   background-position: center;
 }
 
 .smartblast {
-  background-image: url("../../images/protein-2.svg");
+  background-image: url("../images/protein-2.png");
   background-position: center;
 }
 
@@ -1002,22 +1002,22 @@ body #databases section article div h2 {
 
 /* Fondos */
 .geo {
-  background-image: url("../../images/database.svg");
+  background-image: url("../images/database.png");
   background-position: center;
 }
 
 .ncbi {
-  background-image: url("../../images/align.svg");
+  background-image: url("../images/align.png");
   background-position: center;
 }
 
 .biostudies {
-  background-image: url("../../images/protein-1.svg");
+  background-image: url("../images/protein-1.png");
   background-position: center;
 }
 
 .uniprot {
-  background-image: url("../../images/protein-2.svg");
+  background-image: url("../images/protein-2.png");
   background-position: center;
 }
 
