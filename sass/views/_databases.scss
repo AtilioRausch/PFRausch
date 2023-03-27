@@ -1,8 +1,13 @@
+$height: auto;
+$min-width: 300px;
+$marginPorNav: 4rem;
+$background:#252422;
+
 body #databases {
-    margin-top: 4rem;
-    background-color: #252422;
-    height: auto;
-    min-width: 300px;
+    margin-top: $marginPorNav;
+    background-color: $background;
+    height: $height;
+    min-width: $min-width;
 
     section {
         article {
@@ -28,6 +33,7 @@ body #databases {
     }
 }
 
+/* Estilo de carousel */
 #carouselDatabasesLarge {
     width: 75vw;
     margin-top: 4rem;
@@ -35,14 +41,6 @@ body #databases {
 
     .card-databases {
         height: 30rem;
-    }
-
-    .carousel-inner {
-        height: 100%;
-
-        .card-body {
-            height: 100%;
-        }
     }
 }
 
@@ -52,17 +50,65 @@ body #databases {
     display: flex;
     justify-content: center;
 
+    h5,
+    p {
+        width: fit-content;
+        background-color: #252422;
+    }
+
+    h5 {
+        border: #eb5e28 solid 2px;
+    }
+
     @include mobile {
         display: none;
     }
 }
 
 #small-screen-databases {
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     display: none;
+    height: 27rem;
+
+    .card-body {
+        height: 24rem;
+
+        h5,
+        p {
+            width: fit-content;
+            background-color: #252422;
+        }
+
+        h5 {
+            border: #eb5e28 solid 2px;
+        }
+    }
 
     @include mobile {
         display: flex;
         justify-content: center;
     }
+}
+
+/* Fondos */
+$backgroundPosition: center;
+
+.geo {
+    background-image: url("../../images/database.svg");
+    background-position: $backgroundPosition;
+}
+
+.ncbi {
+    background-image: url("../../images/align.svg");
+    background-position: $backgroundPosition;
+}
+
+.biostudies {
+    background-image: url("../../images/protein-1.svg");
+    background-position: $backgroundPosition;
+}
+
+.uniprot {
+    background-image: url("../../images/protein-2.svg");
+    background-position: $backgroundPosition;
 }

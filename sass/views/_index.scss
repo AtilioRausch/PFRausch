@@ -1,4 +1,4 @@
-/* ------------------Background------------------*/
+// Fondos y estilado
 
 .background {
     background-attachment: fixed;
@@ -22,7 +22,7 @@
     background-color: #403d39;
 }
 
-/* ------------------Secciones index------------------*/
+// Barra flotante de navegación
 
 .float-bar {
     position: fixed;
@@ -235,10 +235,7 @@
     }
 }
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-
-/* This container is needed to position the front and back side */
-
+// Estilado de cartas. Fotos de integrantes
 .flip-card {
     width: calc(22vw - 10px);
     height: calc(22vw - 10px);
@@ -263,19 +260,16 @@
 
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
     position: absolute;
     backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
     color: black;
     border-radius: 50%;
@@ -296,7 +290,6 @@
     }
 }
 
-/* Style the back side */
 .flip-card-back {
     background-color: black;
     color: #ccc5b9;
@@ -371,8 +364,9 @@
 
                     img {
                         aspect-ratio: 12/12;
-                        min-width: 200px;
-                        width: calc(16vw - 10px);
+                        min-width: 300px;
+                        width: calc(6rem - 10px);
+                        object-fit: contain;
                     }
                 }
 

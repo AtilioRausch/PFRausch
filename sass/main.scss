@@ -9,33 +9,37 @@
 @import 'views/contact';
 
 
-/* Estilos generales y fuentes */
+$colorTitle: #eb5e28;
+$fontTitle: 'Oswald', sans-serif;
+$fontP: 'Ubuntu', sans-serif;
+
+/* Estilos generales, fuentes y clases generales*/
 a {
     color: #252422;
     text-decoration: none;
 }
 
 h1 {
-    font-family: 'Oswald', sans-serif;
+    font-family: $fontTitle;
     font-size: 2rem;
     text-decoration: underline;
-    color: #eb5e28;
+    color: $colorTitle;
 }
 
 h2 {
-    font-family: 'Oswald', sans-serif;
+    font-family: $fontTitle;
     font-size: 1.75rem;
-    color: #eb5e28;
+    color: $colorTitle;
 }
 
 h3 {
-    font-family: 'Oswald', sans-serif;
+    font-family: $fontTitle;
     font-size: 1.5rem;
-    color: #eb5e28;
+    color: $colorTitle;
 }
 
 p {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $fontP;
     font-size: medium;
     height: fit-content;
     margin: 0%;
@@ -48,7 +52,7 @@ ul {
 }
 
 li {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $fontP;
     font-size: 90%;
 }
 

@@ -1,13 +1,16 @@
-/* ------------------Lobby------------------*/
+$height: auto;
+$min-width: 300px;
+$marginPorNav: 4rem;
+$background: #252422;
 
-/* Estilo del lobby*/
+
 body main {
     #lobby {
+        margin-top: $marginPorNav;
+        background-color: $background;
+        height: $height;
+        min-width: $min-width;
         min-height: 870px;
-        padding-top: 4rem;
-        background-color: black;
-        background-size: cover;
-        background-repeat: no-repeat;
 
         @include mobile {
             height: 70rem;

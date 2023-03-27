@@ -298,7 +298,6 @@ footer {
   }
 }
 
-/* ------------------Background------------------*/
 .background {
   background-attachment: fixed;
   background-position: center;
@@ -321,7 +320,6 @@ footer {
   background-color: #403d39;
 }
 
-/* ------------------Secciones index------------------*/
 .float-bar {
   position: fixed;
   left: calc(100vw - 170px);
@@ -520,8 +518,6 @@ footer {
   }
 }
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-/* This container is needed to position the front and back side */
 .flip-card {
   width: calc(22vw - 10px);
   height: calc(22vw - 10px);
@@ -545,19 +541,16 @@ footer {
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
   color: black;
   border-radius: 50%;
@@ -577,7 +570,6 @@ footer {
   max-height: 350px;
 }
 
-/* Style the back side */
 .flip-card-back {
   background-color: black;
   color: #ccc5b9;
@@ -649,8 +641,9 @@ footer {
 }
 #index section#research article .divListResearch ul li a img {
   aspect-ratio: 12/12;
-  min-width: 200px;
-  width: calc(16vw - 10px);
+  min-width: 300px;
+  width: calc(6rem - 10px);
+  object-fit: contain;
 }
 #index section#research article .divListResearch ul li p {
   max-height: none;
@@ -665,14 +658,12 @@ footer {
   }
 }
 
-/* ------------------Lobby------------------*/
-/* Estilo del lobby*/
 body main #lobby {
+  margin-top: 4rem;
+  background-color: #252422;
+  height: auto;
+  min-width: 300px;
   min-height: 870px;
-  padding-top: 4rem;
-  background-color: black;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 @media screen and (max-width: 576px) {
   body main #lobby {
@@ -762,6 +753,7 @@ body #softwares section article div h2 {
   margin-top: 1rem;
 }
 
+/* Barra de búsqueda */
 .search {
   align-items: center;
 }
@@ -792,25 +784,33 @@ body #softwares section article div h2 {
   background-color: #eb5e28;
 }
 
+/* Estilo de carousel y cartas */
 .cards-wrapper {
   display: flex;
   justify-content: center;
   align-content: center;
   text-align: center;
 }
-
-.card {
+.cards-wrapper .card {
   border: none;
-  background-color: dimgrey;
   border-radius: 0;
   margin: 0 0.5rem;
+  width: 100%;
 }
-.card .card-title {
+.cards-wrapper .card .card-title {
   margin-bottom: 1rem;
 }
-.card .card-text {
+.cards-wrapper .card .card-text {
   margin-bottom: 1rem;
   width: 100%;
+}
+.cards-wrapper .card h5,
+.cards-wrapper .card p {
+  width: fit-content;
+  background-color: #252422;
+}
+.cards-wrapper .card h5 {
+  border: #eb5e28 solid 2px;
 }
 
 #large-screen-own-softwares,
@@ -818,6 +818,11 @@ body #softwares section article div h2 {
   display: flex;
   justify-content: center;
   padding-bottom: 2rem;
+  height: 28rem;
+}
+#large-screen-own-softwares .card-body,
+#large-screen-external-softwares .card-body {
+  height: 27rem;
 }
 @media screen and (max-width: 576px) {
   #large-screen-own-softwares,
@@ -830,6 +835,11 @@ body #softwares section article div h2 {
 #small-screen-external-softwares {
   padding-bottom: 2rem;
   display: none;
+  height: 20rem;
+}
+#small-screen-own-softwares .card-body,
+#small-screen-external-softwares .card-body {
+  height: 18rem;
 }
 @media screen and (max-width: 576px) {
   #small-screen-own-softwares,
@@ -842,14 +852,6 @@ body #softwares section article div h2 {
 #carouselOwnSoftwaresLarge,
 #carouselExternalSoftwaresLarge {
   width: 75vw;
-}
-#carouselOwnSoftwaresLarge .card-databases,
-#carouselExternalSoftwaresLarge .card-databases {
-  height: 20rem;
-}
-
-.card-software {
-  height: 15rem;
 }
 
 .btn-primary {
@@ -882,6 +884,47 @@ body #softwares section article div h2 {
   box-shadow: 0 0 40px #252422;
 }
 
+/* Fondos de cartas */
+.frustratometer {
+  background-image: url("../../images/protein-1.svg");
+  background-position: center;
+}
+
+.ensembl {
+  background-image: url("../../images/database.svg");
+  background-position: center;
+}
+
+.kalign {
+  background-image: url("../../images/align.svg");
+  background-position: center;
+}
+
+.clustalw {
+  background-image: url("../../images/align.svg");
+  background-position: center;
+}
+
+.blastn {
+  background-image: url("../../images/align.svg");
+  background-position: center;
+}
+
+.blastp {
+  background-image: url("../../images/protein-1.svg");
+  background-position: center;
+}
+
+.blast {
+  background-image: url("../../images/align.svg");
+  background-position: center;
+}
+
+.smartblast {
+  background-image: url("../../images/protein-2.svg");
+  background-position: center;
+}
+
 body #databases {
   margin-top: 4rem;
   background-color: #252422;
@@ -904,6 +947,7 @@ body #databases section article div h2 {
   margin-top: 1rem;
 }
 
+/* Estilo de carousel */
 #carouselDatabasesLarge {
   width: 75vw;
   margin-top: 4rem;
@@ -912,18 +956,20 @@ body #databases section article div h2 {
 #carouselDatabasesLarge .card-databases {
   height: 30rem;
 }
-#carouselDatabasesLarge .carousel-inner {
-  height: 100%;
-}
-#carouselDatabasesLarge .carousel-inner .card-body {
-  height: 100%;
-}
 
 #large-screen-databases {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
   display: flex;
   justify-content: center;
+}
+#large-screen-databases h5,
+#large-screen-databases p {
+  width: fit-content;
+  background-color: #252422;
+}
+#large-screen-databases h5 {
+  border: #eb5e28 solid 2px;
 }
 @media screen and (max-width: 576px) {
   #large-screen-databases {
@@ -932,14 +978,47 @@ body #databases section article div h2 {
 }
 
 #small-screen-databases {
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
   display: none;
+  height: 27rem;
+}
+#small-screen-databases .card-body {
+  height: 24rem;
+}
+#small-screen-databases .card-body h5,
+#small-screen-databases .card-body p {
+  width: fit-content;
+  background-color: #252422;
+}
+#small-screen-databases .card-body h5 {
+  border: #eb5e28 solid 2px;
 }
 @media screen and (max-width: 576px) {
   #small-screen-databases {
     display: flex;
     justify-content: center;
   }
+}
+
+/* Fondos */
+.geo {
+  background-image: url("../../images/database.svg");
+  background-position: center;
+}
+
+.ncbi {
+  background-image: url("../../images/align.svg");
+  background-position: center;
+}
+
+.biostudies {
+  background-image: url("../../images/protein-1.svg");
+  background-position: center;
+}
+
+.uniprot {
+  background-image: url("../../images/protein-2.svg");
+  background-position: center;
 }
 
 body #contact {
@@ -1004,7 +1083,7 @@ body #contact button {
   margin-bottom: 2rem;
 }
 
-/* Estilos generales y fuentes */
+/* Estilos generales, fuentes y clases generales*/
 a {
   color: #252422;
   text-decoration: none;

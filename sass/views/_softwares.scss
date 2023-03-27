@@ -1,8 +1,13 @@
+$height: auto;
+$min-width: 300px;
+$marginPorNav: 4rem;
+$background:#252422;
+
 body #softwares {
-    margin-top: 4rem;
-    background-color: #252422;
-    height: auto;
-    min-width: 300px;
+    margin-top: $marginPorNav;
+    background-color: $background;
+    height: $height;
+    min-width: $min-width;
 
     section {
         article {
@@ -27,6 +32,7 @@ body #softwares {
     }
 }
 
+/* Barra de búsqueda */
 .search {
     align-items: center;
 
@@ -65,26 +71,37 @@ body #softwares {
     }
 }
 
+/* Estilo de carousel y cartas */
 .cards-wrapper {
     display: flex;
     justify-content: center;
     align-content: center;
     text-align: center;
-}
 
-.card {
-    border: none;
-    background-color: dimgrey;
-    border-radius: 0;
-    margin: 0 0.5rem;
-
-    .card-title {
-        margin-bottom: 1rem;
-    }
-
-    .card-text {
-        margin-bottom: 1rem;
+    .card {
+        border: none;
+        border-radius: 0;
+        margin: 0 0.5rem;
         width: 100%;
+
+        .card-title {
+            margin-bottom: 1rem;
+        }
+
+        .card-text {
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        h5,
+        p {
+            width: fit-content;
+            background-color: #252422;
+        }
+
+        h5 {
+            border: #eb5e28 solid 2px;
+        }
     }
 }
 
@@ -93,6 +110,11 @@ body #softwares {
     display: flex;
     justify-content: center;
     padding-bottom: 2rem;
+    height: 28rem;
+
+    .card-body {
+        height: 27rem;
+    }
 
     @include mobile {
         display: none;
@@ -103,6 +125,11 @@ body #softwares {
 #small-screen-external-softwares {
     padding-bottom: 2rem;
     display: none;
+    height: 20rem;
+
+    .card-body {
+        height: 18rem;
+    }
 
     @include mobile {
         display: flex;
@@ -113,16 +140,8 @@ body #softwares {
 #carouselOwnSoftwaresLarge,
 #carouselExternalSoftwaresLarge {
     width: 75vw;
-
-    .card-databases {
-        height: 20rem;
-    }
 }
 
-
-.card-software {
-    height: 15rem;
-}
 
 .btn-primary {
     --bs-btn-color: #ccc5b9;
@@ -154,4 +173,47 @@ body #softwares {
     position: relative;
     box-shadow: 0 0 40px #252422;
 
+}
+
+/* Fondos de cartas */
+$backgroundPosition: center;
+
+.frustratometer {
+    background-image: url("../../images/protein-1.svg");
+    background-position: $backgroundPosition;
+}
+
+.ensembl {
+    background-image: url("../../images/database.svg");
+    background-position: $backgroundPosition;
+}
+
+.kalign {
+    background-image: url("../../images/align.svg");
+    background-position: $backgroundPosition;
+}
+
+.clustalw {
+    background-image: url("../../images/align.svg");
+    background-position: $backgroundPosition;
+}
+
+.blastn {
+    background-image: url("../../images/align.svg");
+    background-position: $backgroundPosition;
+}
+
+.blastp {
+    background-image: url("../../images/protein-1.svg");
+    background-position: $backgroundPosition;
+}
+
+.blast {
+    background-image: url("../../images/align.svg");
+    background-position: $backgroundPosition;
+}
+
+.smartblast {
+    background-image: url("../../images/protein-2.svg");
+    background-position: $backgroundPosition;
 }
